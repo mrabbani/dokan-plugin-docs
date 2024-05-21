@@ -89,22 +89,22 @@ The orders API allows you to create, view, update, and delete individual, or a b
 
 ### Order - Line items properties ###
 
-| Attribute      | Type    | Description                                                                                                   |
-|----------------|---------|---------------------------------------------------------------------------------------------------------------|
-| `id`           | integer | Item ID. <i class="label label-info">read-only</i>                                                            |
-| `name`         | string  | Product name.                                                                                                 |
-| `product_id`   | integer | Product ID.                                                                                                   |
-| `variation_id` | integer | Variation ID, if applicable.                                                                                  |
-| `quantity`     | integer | Quantity ordered.                                                                                             |
-| `tax_class`    | string | Slug of the tax class of product.                                                                                         |
-| `subtotal`     | string  | Line subtotal (before discounts).                                                                             |
-| `subtotal_tax` | string  | Line subtotal tax (before discounts). <i class="label label-info">read-only</i>                               |
-| `total`        | string  | Line total (after discounts).                                                                                 |
-| `total_tax`    | string  | Line total tax (after discounts). <i class="label label-info">read-only</i>                                   |
-| `taxes`        | array   | Line taxes. See [Order - Taxes properties](#order-taxes-properties) <i class="label label-info">read-only</i> |
-| `meta_data`    | array   | Meta data. See [Order - Meta data properties](#order-meta-data-properties)                                    |
-| `sku`          | string  | Product SKU. <i class="label label-info">read-only</i>                                                        |
-| `price`        | string  | Product price. <i class="label label-info">read-only</i>                                                      |
+| Attribute      | Type    | Description                                                                                                           |
+|----------------|---------|-----------------------------------------------------------------------------------------------------------------------|
+| `id`           | integer | Item ID. <i class="label label-info">read-only</i>                                                                    |
+| `name`         | string  | Product name.                                                                                                         |
+| `product_id`   | integer | Product ID.                                                                                                           |
+| `variation_id` | integer | Variation ID, if applicable.                                                                                          |
+| `quantity`     | integer | Quantity ordered.                                                                                                     |
+| `tax_class`    | string | Slug of the tax class of product.                                                                                     |
+| `subtotal`     | string  | Line subtotal (before discounts).                                                                                     |
+| `subtotal_tax` | string  | Line subtotal tax (before discounts). <i class="label label-info">read-only</i>                                       |
+| `total`        | string  | Line total (after discounts).                                                                                         |
+| `total_tax`    | string  | Line total tax (after discounts). <i class="label label-info">read-only</i>                                           |
+| `taxes`        | array   | Line taxes. See [Order - Tax lines properties](#order-tax-lines-properties) <i class="label label-info">read-only</i> |
+| `meta_data`    | array   | Meta data. See [Order - Meta data properties](#order-meta-data-properties)                                            |
+| `sku`          | string  | Product SKU. <i class="label label-info">read-only</i>                                                                |
+| `price`        | string  | Product price. <i class="label label-info">read-only</i>                                                              |
 
 ### Order - Tax lines properties ###
 
@@ -121,28 +121,28 @@ The orders API allows you to create, view, update, and delete individual, or a b
 
 ### Order - Shipping lines properties ###
 
-| Attribute      | Type    | Description                                                                                                   |
-|----------------|---------|---------------------------------------------------------------------------------------------------------------|
-| `id`           | integer | Item ID. <i class="label label-info">read-only</i>                                                            |
-| `method_title` | string  | Shipping method name.                                                                                         |
-| `method_id`    | string  | Shipping method ID.                                                                                           |
-| `total`        | string  | Line total (after discounts).                                                                                 |
-| `total_tax`    | string  | Line total tax (after discounts). <i class="label label-info">read-only</i>                                   |
-| `taxes`        | array   | Line taxes. See [Order - Taxes properties](#order-taxes-properties) <i class="label label-info">read-only</i> |
-| `meta_data`    | array   | Meta data. See [Order - Meta data properties](#order-meta-data-properties)                                    |
+| Attribute      | Type    | Description                                                                                                           |
+|----------------|---------|-----------------------------------------------------------------------------------------------------------------------|
+| `id`           | integer | Item ID. <i class="label label-info">read-only</i>                                                                    |
+| `method_title` | string  | Shipping method name.                                                                                                 |
+| `method_id`    | string  | Shipping method ID.                                                                                                   |
+| `total`        | string  | Line total (after discounts).                                                                                         |
+| `total_tax`    | string  | Line total tax (after discounts). <i class="label label-info">read-only</i>                                           |
+| `taxes`        | array   | Line taxes. See [Order - Tax lines properties](#order-tax-lines-properties) <i class="label label-info">read-only</i> |
+| `meta_data`    | array   | Meta data. See [Order - Meta data properties](#order-meta-data-properties)                                            |
 
 ### Order - Fee lines properties ###
 
-| Attribute    | Type    | Description                                                                                                   |
-|--------------|---------|---------------------------------------------------------------------------------------------------------------|
-| `id`         | integer | Item ID. <i class="label label-info">read-only</i>                                                            |
-| `name`       | string  | Fee name.                                                                                                     |
-| `tax_class`  | string  | Tax class of fee.                                                                                             |
-| `tax_status` | string  | Tax status of fee. Options: `taxable` and `none`.                                                             |
-| `total`      | string  | Line total (after discounts).                                                                                 |
-| `total_tax`  | string  | Line total tax (after discounts). <i class="label label-info">read-only</i>                                   |
-| `taxes`      | array   | Line taxes. See [Order - Taxes properties](#order-taxes-properties) <i class="label label-info">read-only</i> |
-| `meta_data`  | array   | Meta data. See [Order - Meta data properties](#order-meta-data-properties)                                    |
+| Attribute    | Type    | Description                                                                                                           |
+|--------------|---------|-----------------------------------------------------------------------------------------------------------------------|
+| `id`         | integer | Item ID. <i class="label label-info">read-only</i>                                                                    |
+| `name`       | string  | Fee name.                                                                                                             |
+| `tax_class`  | string  | Tax class of fee.                                                                                                     |
+| `tax_status` | string  | Tax status of fee. Options: `taxable` and `none`.                                                                     |
+| `total`      | string  | Line total (after discounts).                                                                                         |
+| `total_tax`  | string  | Line total tax (after discounts). <i class="label label-info">read-only</i>                                           |
+| `taxes`      | array   | Line taxes. See [Order - Tax lines properties](#order-tax-lines-properties) <i class="label label-info">read-only</i> |
+| `meta_data`  | array   | Meta data. See [Order - Meta data properties](#order-meta-data-properties)                                            |
 
 ### Order - Coupon lines properties ###
 
@@ -161,19 +161,6 @@ The orders API allows you to create, view, update, and delete individual, or a b
 | `id`      | integer | Refund ID. <i class="label label-info">read-only</i>     |
 | `reason`  | string  | Refund reason. <i class="label label-info">read-only</i> |
 | `total`   | string  | Refund total. <i class="label label-info">read-only</i>  |
-
-### Order - Taxes properties ###
-
-| Attribute            | Type    | Description                                                                         |
-|----------------------|---------|-------------------------------------------------------------------------------------|
-| `id`                 | integer | Item ID. <i class="label label-info">read-only</i>                                  |
-| `rate_code`          | string  | Tax rate code. <i class="label label-info">read-only</i>                            |
-| `rate_id`            | string  | Tax rate ID. <i class="label label-info">read-only</i>                              |
-| `label`              | string  | Tax rate label. <i class="label label-info">read-only</i>                           |
-| `compound`           | boolean | Show if is a compound tax rate. <i class="label label-info">read-only</i>           |
-| `tax_total`          | string  | Tax total (not including shipping taxes). <i class="label label-info">read-only</i> |
-| `shipping_tax_total` | string  | Shipping tax total. <i class="label label-info">read-only</i>                       |
-| `meta_data`          | array   | Meta data. See [Order - Meta data properties](#order-meta-data-properties)          |
 
 ## Create an order ##
 
