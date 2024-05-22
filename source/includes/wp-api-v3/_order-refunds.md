@@ -38,7 +38,7 @@ The order refunds API allows you to create, view, and delete individual refunds,
 | `product_id`   | integer | Product ID.                                                                                                                                     |
 | `variation_id` | integer | Variation ID, if applicable.                                                                                                                    |
 | `quantity`     | integer | Quantity ordered.                                                                                                                               |
-| `tax_class`    | integer | Tax class of product.                                                                                                                           |
+| `tax_class`    | string  | Tax class of product.                                                                                                                           |
 | `subtotal`     | string  | Line subtotal (before discounts).                                                                                                               |
 | `subtotal_tax` | string  | Line subtotal tax (before discounts). <i class="label label-info">read-only</i>                                                                 |
 | `total`        | string  | Line total (after discounts).                                                                                                                   |
