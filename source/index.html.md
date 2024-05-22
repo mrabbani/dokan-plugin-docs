@@ -35,6 +35,7 @@ includes:
   - wp-api-v3/product-tags
   - wp-api-v3/product-reviews
   - wp-api-v3/reports
+  - wp-api-v3/refunds
   - wp-api-v3/taxes
   - wp-api-v3/tax-classes
   - wp-api-v3/webhooks

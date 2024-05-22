@@ -333,6 +333,8 @@ woocommerce.get("orders/723/refunds/726").parsed_response
 
 This API helps you to view all the refunds from an order.
 
+Note: To view a list of refunds from your store, regardless of order, check out the [refunds endpoint](#refunds).
+
 ### HTTP request ###
 
 <div class="api-endpoint">
