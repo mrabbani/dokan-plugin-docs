@@ -112,7 +112,7 @@ The orders API allows you to create, view, update, and delete individual, or a b
 |----------------------|---------|-------------------------------------------------------------------------------------|
 | `id`                 | integer | Item ID. <i class="label label-info">read-only</i>                                  |
 | `rate_code`          | string  | Tax rate code. <i class="label label-info">read-only</i>                            |
-| `rate_id`            | string  | Tax rate ID. <i class="label label-info">read-only</i>                              |
+| `rate_id`            | integer | Tax rate ID. <i class="label label-info">read-only</i>                              |
 | `label`              | string  | Tax rate label. <i class="label label-info">read-only</i>                           |
 | `compound`           | boolean | Show if is a compound tax rate. <i class="label label-info">read-only</i>           |
 | `tax_total`          | string  | Tax total (not including shipping taxes). <i class="label label-info">read-only</i> |
