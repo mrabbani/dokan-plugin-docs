@@ -1504,7 +1504,7 @@ This API helps you to duplicate a product.
 <div class="api-endpoint">
 	<div class="endpoint-data">
 		<i class="label label-post">POST</i>
-		<h6>/wp-json/wc/v3/products/<product_id>/duplicate</h6>
+		<h6>/wp-json/wc/v3/products/&lt;product_id&gt;/duplicate</h6>
 	</div>
 </div>
 
