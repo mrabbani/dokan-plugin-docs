@@ -47,7 +47,6 @@ The order refunds API allows you to create, view, and delete individual refunds,
 | `meta_data`    | array   | Meta data. See [Order refund - Meta data properties](#order-refund-meta-data-properties)                                                        |
 | `sku`          | string  | Product SKU. <i class="label label-info">read-only</i>                                                                                          |
 | `price`        | string  | Product price. <i class="label label-info">read-only</i>                                                                                        |
-| `refund_total` | number  | The amount to refund for this line item, excluding taxes. <i class="label label-info">write-only</i>                                            |
 
 #### Order refund line item - Taxes properties ####
 
@@ -56,7 +55,6 @@ The order refunds API allows you to create, view, and delete individual refunds,
 | `id`           | integer | Tax rate ID. <i class="label label-info">read-only</i>                         |
 | `total`        | string  | Tax total. <i class="label label-info">read-only</i>                           |
 | `subtotal`     | string  | Tax subtotal. <i class="label label-info">read-only</i>                        |
-| `refund_total` | number  | The amount to refund for this tax. <i class="label label-info">write-only</i>  |
 
 ### Order refund - Tax lines properties ###
 
@@ -249,6 +247,21 @@ woocommerce.post("orders/723/refunds", data).parsed_response
   }
 }
 ```
+
+#### Line item parameters ####
+
+| Parameter      | Type    | Description                                                                |
+|----------------|---------|----------------------------------------------------------------------------|
+| `id`           | integer | The ID of the line item in the order.                                      |
+| `refund_total` | number  | The amount to refund for this line item, excluding taxes.                  |
+| `refund_tax`   | array   | Refunds for tax rates. See [Refund tax parameters](#refund-tax-parameters) |
+
+#### Refund tax parameters ####
+
+| Parameter      | Type    | Description                                                    |
+|----------------|---------|----------------------------------------------------------------|
+| `id`           | integer | The ID of the tax rate.                                        |
+| `refund_total` | number  | The amount of tax to refund for this line item. |
 
 ## Retrieve a refund ##
 
