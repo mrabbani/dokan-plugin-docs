@@ -1,6 +1,6 @@
 # Product custom fields #
 
-The product custom fields API allows you to view the custom fields that have been recorded.
+The product custom fields API allows you to view the custom field names that have been recorded.
 
 ## Product custom fields properties ##
 
@@ -9,9 +9,9 @@ The product custom fields API allows you to view the custom fields that have bee
 | `key`     | string | The custom field key.                                                                                       |
 | `value`   | string | The value set for the key.                                                                                  |
 
-## Retrieve product custom fields ##
+## Retrieve product custom field names ##
 
-This API lets you retrieve filtered custom fields.
+This API lets you retrieve filtered custom field names.
 
 <div class="api-endpoint">
 	<div class="endpoint-data">
