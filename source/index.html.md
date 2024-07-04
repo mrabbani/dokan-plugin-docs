@@ -31,6 +31,7 @@ includes:
   - wp-api-v3/product-attributes
   - wp-api-v3/product-attribute-terms
   - wp-api-v3/product-categories
+  - wp-api-v3/product-custom-fields
   - wp-api-v3/product-shipping-classes
   - wp-api-v3/product-tags
   - wp-api-v3/product-reviews
