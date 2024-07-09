@@ -108,7 +108,7 @@ The products API allows you to create, view, update, and delete individual, or a
 
 | Attribute           | Type      | Description                                                                                             |
 |---------------------|-----------|---------------------------------------------------------------------------------------------------------|
-| `id`                | integer   | Image ID.                                                                                               |
+| `id`                | integer   | The attachment ID from the Media Library.                                                               |
 | `date_created`      | date-time | The date the image was created, in the site's timezone. <i class="label label-info">read-only</i>       |
 | `date_created_gmt`  | date-time | The date the image was created, as GMT. <i class="label label-info">read-only</i>                       |
 | `date_modified`     | date-time | The date the image was last modified, in the site's timezone. <i class="label label-info">read-only</i> |
@@ -157,7 +157,7 @@ This API helps you to create a new product.
 	</div>
 </div>
 
-> Example of how to create a `simple` product:
+> Example of how to create a `simple` product with one existing image and one new image:
 
 ```shell
 curl -X POST https://example.com/wp-json/wc/v3/products \
@@ -179,7 +179,7 @@ curl -X POST https://example.com/wp-json/wc/v3/products \
   ],
   "images": [
     {
-      "src": "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg"
+      "id": 42
     },
     {
       "src": "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_back.jpg"
@@ -205,7 +205,7 @@ const data = {
   ],
   images: [
     {
-      src: "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg"
+	  id: 42
     },
     {
       src: "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_back.jpg"
@@ -240,7 +240,7 @@ $data = [
     ],
     'images' => [
         [
-            'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg'
+            'id': 42
         ],
         [
             'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_back.jpg'
@@ -269,7 +269,7 @@ data = {
     ],
     "images": [
         {
-            "src": "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg"
+            "id": 42
         },
         {
             "src": "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_back.jpg"
@@ -297,7 +297,7 @@ data = {
   ],
   images: [
     {
-      src: "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg"
+      id: 42
     },
     {
       src: "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_back.jpg",
@@ -393,11 +393,11 @@ woocommerce.post("products", data).parsed_response
   "tags": [],
   "images": [
     {
-      "id": 792,
-      "date_created": "2017-03-23T14:01:13",
-      "date_created_gmt": "2017-03-23T20:01:13",
-      "date_modified": "2017-03-23T14:01:13",
-      "date_modified_gmt": "2017-03-23T20:01:13",
+      "id": 42,
+      "date_created": "2017-03-22T14:01:13",
+      "date_created_gmt": "2017-03-22T20:01:13",
+      "date_modified": "2017-03-22T14:01:13",
+      "date_modified_gmt": "2017-03-22T20:01:13",
       "src": "https://example.com/wp-content/uploads/2017/03/T_2_front-4.jpg",
       "name": "",
       "alt": ""
