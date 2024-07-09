@@ -393,7 +393,7 @@ woocommerce.get("coupons").parsed_response
 #### Available parameters ####
 
 | Parameter         | Type    | Description                                                                                                                  |
-| ----------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| ----------------- | ------- |------------------------------------------------------------------------------------------------------------------------------|
 | `context`         | string  | Scope under which the request is made; determines fields present in response. Options: `view` and `edit`. Default is `view`. |
 | `page`            | integer | Current page of the collection. Default is `1`.                                                                              |
 | `per_page`        | integer | Maximum number of items to be returned in result set. Default is `10`.                                                       |
@@ -407,7 +407,7 @@ woocommerce.get("coupons").parsed_response
 | `include`         | array   | Limit result set to specific ids.                                                                                            |
 | `offset`          | integer | Offset the result set by a specific number of items.                                                                         |
 | `order`           | string  | Order sort attribute ascending or descending. Options: `asc` and `desc`. Default is `desc`.                                  |
-| `orderby`         | string  | Sort collection by object attribute. Options: `date`, `id`, `include`, `title` and `slug`. Default is `date`.                |
+| `orderby`         | string  | Sort collection by object attribute. Options: `date`, `modified`, `id`, `include`, `title` and `slug`. Default is `date`.    |
 | `code`            | string  | Limit result set to resources with a specific code.                                                                          |
 
 ## Update a coupon ##
