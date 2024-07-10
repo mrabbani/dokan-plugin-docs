@@ -2,12 +2,17 @@
 
 The product custom fields API allows you to view the custom field names that have been recorded.
 
-## Product custom fields properties ##
+## Available parameters ##
 
-| Attribute | Type   | Description                                                                                                 |
-| --------- | ------ | ----------------------------------------------------------------------------------------------------------- |
-| `key`     | string | The custom field key.                                                                                       |
-| `value`   | string | The value set for the key.                                                                                  |
+| Parameter | Type     | Description                                                                                                                  |
+| --------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `context`  | string  | Scope under which the request is made; determines fields present in response. Options: `view` and `edit`. Default is `view`. |
+| `page`     | integer | Current page of the collection. Default is `1`.                                                                              |
+| `per_page` | integer | Maximum number of items to be returned in result set. Default is `10`.                                                       |
+| `search`   | string  | Limit results to those matching a string.                                                                                    |
+| `exclude`  | array   | Ensure result set excludes specific IDs.                                                                                     |
+| `include`  | array   | Limit result set to specific ids.                                                                                            |
+| `order`    | string  | Order sort attribute ascending or descending. Options: `asc` and `desc`. Default is `desc`.                                  |
 
 ## Retrieve product custom field names ##
 
@@ -16,7 +21,7 @@ This API lets you retrieve filtered custom field names.
 <div class="api-endpoint">
 	<div class="endpoint-data">
 		<i class="label label-get">GET</i>
-		<h6>/wp-json//wc/v3/products/custom-fields/names</h6>
+		<h6>/wp-json/wc/v3/products/custom-fields/names</h6>
 	</div>
 </div>
 
