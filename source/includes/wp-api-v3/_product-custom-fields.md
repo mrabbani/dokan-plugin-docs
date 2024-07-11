@@ -6,13 +6,11 @@ The product custom fields API allows you to view the custom field names that hav
 
 | Parameter  | Type     | Description                                                                                                                  |
 | ---------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `context`  | string  | Scope under which the request is made; determines fields present in response. Options: `view` and `edit`. Default is `view`. |
-| `page`     | integer | Current page of the collection. Default is `1`.                                                                              |
-| `per_page` | integer | Maximum number of items to be returned in result set. Default is `10`.                                                       |
-| `search`   | string  | Limit results to those matching a string.                                                                                    |
-| `exclude`  | array   | Ensure result set excludes specific IDs.                                                                                     |
-| `include`  | array   | Limit result set to specific ids.                                                                                            |
-| `order`    | string  | Order sort attribute ascending or descending. Options: `asc` and `desc`. Default is `desc`.                                  |
+| `context`  | string   | Scope under which the request is made; determines fields present in response. Options: `view` and `edit`. Default is `view`. |
+| `page`     | integer  | Current page of the collection. Default is `1`.                                                                              |
+| `per_page` | integer  | Maximum number of items to be returned in result set. Default is `10`.                                                       |
+| `search`   | string   | Limit results to those matching a string.                                                                                    |
+| `order`    | string   | Order sort attribute ascending or descending. Options: `asc` and `desc`. Default is `desc`.                                  |
 
 ## Retrieve product custom field names ##
 
