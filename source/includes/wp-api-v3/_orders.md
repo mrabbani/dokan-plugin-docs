@@ -89,22 +89,22 @@ The orders API allows you to create, view, update, and delete individual, or a b
 
 ### Order - Line items properties ###
 
-| Attribute      | Type    | Description                                                                                                   |
-|----------------|---------|---------------------------------------------------------------------------------------------------------------|
-| `id`           | integer | Item ID. <i class="label label-info">read-only</i>                                                            |
-| `name`         | string  | Product name.                                                                                                 |
-| `product_id`   | integer | Product ID.                                                                                                   |
-| `variation_id` | integer | Variation ID, if applicable.                                                                                  |
-| `quantity`     | integer | Quantity ordered.                                                                                             |
-| `tax_class`    | string | Slug of the tax class of product.                                                                                         |
-| `subtotal`     | string  | Line subtotal (before discounts).                                                                             |
-| `subtotal_tax` | string  | Line subtotal tax (before discounts). <i class="label label-info">read-only</i>                               |
-| `total`        | string  | Line total (after discounts).                                                                                 |
-| `total_tax`    | string  | Line total tax (after discounts). <i class="label label-info">read-only</i>                                   |
-| `taxes`        | array   | Line taxes. See [Order - Taxes properties](#order-taxes-properties) <i class="label label-info">read-only</i> |
-| `meta_data`    | array   | Meta data. See [Order - Meta data properties](#order-meta-data-properties)                                    |
-| `sku`          | string  | Product SKU. <i class="label label-info">read-only</i>                                                        |
-| `price`        | string  | Product price. <i class="label label-info">read-only</i>                                                      |
+| Attribute      | Type    | Description                                                                                                           |
+|----------------|---------|-----------------------------------------------------------------------------------------------------------------------|
+| `id`           | integer | Item ID. <i class="label label-info">read-only</i>                                                                    |
+| `name`         | string  | Product name.                                                                                                         |
+| `product_id`   | integer | Product ID.                                                                                                           |
+| `variation_id` | integer | Variation ID, if applicable.                                                                                          |
+| `quantity`     | integer | Quantity ordered.                                                                                                     |
+| `tax_class`    | string | Slug of the tax class of product.                                                                                     |
+| `subtotal`     | string  | Line subtotal (before discounts).                                                                                     |
+| `subtotal_tax` | string  | Line subtotal tax (before discounts). <i class="label label-info">read-only</i>                                       |
+| `total`        | string  | Line total (after discounts).                                                                                         |
+| `total_tax`    | string  | Line total tax (after discounts). <i class="label label-info">read-only</i>                                           |
+| `taxes`        | array   | Line taxes. See [Order - Tax lines properties](#order-tax-lines-properties) <i class="label label-info">read-only</i> |
+| `meta_data`    | array   | Meta data. See [Order - Meta data properties](#order-meta-data-properties)                                            |
+| `sku`          | string  | Product SKU. <i class="label label-info">read-only</i>                                                                |
+| `price`        | string  | Product price. <i class="label label-info">read-only</i>                                                              |
 
 ### Order - Tax lines properties ###
 
@@ -112,37 +112,37 @@ The orders API allows you to create, view, update, and delete individual, or a b
 |----------------------|---------|-------------------------------------------------------------------------------------|
 | `id`                 | integer | Item ID. <i class="label label-info">read-only</i>                                  |
 | `rate_code`          | string  | Tax rate code. <i class="label label-info">read-only</i>                            |
-| `rate_id`            | string  | Tax rate ID. <i class="label label-info">read-only</i>                              |
+| `rate_id`            | integer | Tax rate ID. <i class="label label-info">read-only</i>                              |
 | `label`              | string  | Tax rate label. <i class="label label-info">read-only</i>                           |
-| `compound`           | boolean | Show if is a compound tax rate. <i class="label label-info">read-only</i>           |
+| `compound`           | boolean | Whether or not this is a compound tax rate. <i class="label label-info">read-only</i>           |
 | `tax_total`          | string  | Tax total (not including shipping taxes). <i class="label label-info">read-only</i> |
 | `shipping_tax_total` | string  | Shipping tax total. <i class="label label-info">read-only</i>                       |
 | `meta_data`          | array   | Meta data. See [Order - Meta data properties](#order-meta-data-properties)          |
 
 ### Order - Shipping lines properties ###
 
-| Attribute      | Type    | Description                                                                                                   |
-|----------------|---------|---------------------------------------------------------------------------------------------------------------|
-| `id`           | integer | Item ID. <i class="label label-info">read-only</i>                                                            |
-| `method_title` | string  | Shipping method name.                                                                                         |
-| `method_id`    | string  | Shipping method ID.                                                                                           |
-| `total`        | string  | Line total (after discounts).                                                                                 |
-| `total_tax`    | string  | Line total tax (after discounts). <i class="label label-info">read-only</i>                                   |
-| `taxes`        | array   | Line taxes. See [Order - Taxes properties](#order-taxes-properties) <i class="label label-info">read-only</i> |
-| `meta_data`    | array   | Meta data. See [Order - Meta data properties](#order-meta-data-properties)                                    |
+| Attribute      | Type    | Description                                                                                                           |
+|----------------|---------|-----------------------------------------------------------------------------------------------------------------------|
+| `id`           | integer | Item ID. <i class="label label-info">read-only</i>                                                                    |
+| `method_title` | string  | Shipping method name.                                                                                                 |
+| `method_id`    | string  | Shipping method ID.                                                                                                   |
+| `total`        | string  | Line total (after discounts).                                                                                         |
+| `total_tax`    | string  | Line total tax (after discounts). <i class="label label-info">read-only</i>                                           |
+| `taxes`        | array   | Line taxes. See [Order - Tax lines properties](#order-tax-lines-properties) <i class="label label-info">read-only</i> |
+| `meta_data`    | array   | Meta data. See [Order - Meta data properties](#order-meta-data-properties)                                            |
 
 ### Order - Fee lines properties ###
 
-| Attribute    | Type    | Description                                                                                                   |
-|--------------|---------|---------------------------------------------------------------------------------------------------------------|
-| `id`         | integer | Item ID. <i class="label label-info">read-only</i>                                                            |
-| `name`       | string  | Fee name.                                                                                                     |
-| `tax_class`  | string  | Tax class of fee.                                                                                             |
-| `tax_status` | string  | Tax status of fee. Options: `taxable` and `none`.                                                             |
-| `total`      | string  | Line total (after discounts).                                                                                 |
-| `total_tax`  | string  | Line total tax (after discounts). <i class="label label-info">read-only</i>                                   |
-| `taxes`      | array   | Line taxes. See [Order - Taxes properties](#order-taxes-properties) <i class="label label-info">read-only</i> |
-| `meta_data`  | array   | Meta data. See [Order - Meta data properties](#order-meta-data-properties)                                    |
+| Attribute    | Type    | Description                                                                                                           |
+|--------------|---------|-----------------------------------------------------------------------------------------------------------------------|
+| `id`         | integer | Item ID. <i class="label label-info">read-only</i>                                                                    |
+| `name`       | string  | Fee name.                                                                                                             |
+| `tax_class`  | string  | Tax class of fee.                                                                                                     |
+| `tax_status` | string  | Tax status of fee. Options: `taxable` and `none`.                                                                     |
+| `total`      | string  | Line total (after discounts).                                                                                         |
+| `total_tax`  | string  | Line total tax (after discounts). <i class="label label-info">read-only</i>                                           |
+| `taxes`      | array   | Line taxes. See [Order - Tax lines properties](#order-tax-lines-properties) <i class="label label-info">read-only</i> |
+| `meta_data`  | array   | Meta data. See [Order - Meta data properties](#order-meta-data-properties)                                            |
 
 ### Order - Coupon lines properties ###
 
@@ -161,19 +161,6 @@ The orders API allows you to create, view, update, and delete individual, or a b
 | `id`      | integer | Refund ID. <i class="label label-info">read-only</i>     |
 | `reason`  | string  | Refund reason. <i class="label label-info">read-only</i> |
 | `total`   | string  | Refund total. <i class="label label-info">read-only</i>  |
-
-### Order - Taxes properties ###
-
-| Attribute            | Type    | Description                                                                         |
-|----------------------|---------|-------------------------------------------------------------------------------------|
-| `id`                 | integer | Item ID. <i class="label label-info">read-only</i>                                  |
-| `rate_code`          | string  | Tax rate code. <i class="label label-info">read-only</i>                            |
-| `rate_id`            | string  | Tax rate ID. <i class="label label-info">read-only</i>                              |
-| `label`              | string  | Tax rate label. <i class="label label-info">read-only</i>                           |
-| `compound`           | boolean | Show if is a compound tax rate. <i class="label label-info">read-only</i>           |
-| `tax_total`          | string  | Tax total (not including shipping taxes). <i class="label label-info">read-only</i> |
-| `shipping_tax_total` | string  | Shipping tax total. <i class="label label-info">read-only</i>                       |
-| `meta_data`          | array   | Meta data. See [Order - Meta data properties](#order-meta-data-properties)          |
 
 ## Create an order ##
 
@@ -1187,28 +1174,28 @@ woocommerce.get("orders").parsed_response
 
 #### Available parameters ####
 
-| Parameter         | Type    | Description                                                                                                                              |
-|-------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------|
-| `context`         | string  | Scope under which the request is made; determines fields present in response. Options: `view` and `edit`. Default is `view`.             |
-| `page`            | integer | Current page of the collection. Default is `1`.                                                                                          |
-| `per_page`        | integer | Maximum number of items to be returned in result set. Default is `10`.                                                                   |
-| `search`          | string  | Limit results to those matching a string.                                                                                                |
-| `after`           | string  | Limit response to resources published after a given ISO8601 compliant date.                                                              |
-| `before`          | string  | Limit response to resources published before a given ISO8601 compliant date.                                                             |
-| `modified_after`  | string  | Limit response to resources modified after a given ISO8601 compliant date.                                                               |
-| `modified_before` | string  | Limit response to resources modified after a given ISO8601 compliant date.                                                               |
-| `dates_are_gmt`   | boolean | Whether to consider GMT post dates when limiting response by published or modified date.                                                 |
-| `exclude`         | array   | Ensure result set excludes specific IDs.                                                                                                 |
-| `include`         | array   | Limit result set to specific ids.                                                                                                        |
-| `offset`          | integer | Offset the result set by a specific number of items.                                                                                     |
-| `order`           | string  | Order sort attribute ascending or descending. Options: `asc` and `desc`. Default is `desc`.                                              |
-| `orderby`         | string  | Sort collection by object attribute. Options: `date`, `id`, `include`, `title` and `slug`. Default is `date`.                            |
-| `parent`          | array   | Limit result set to those of particular parent IDs.                                                                                      |
-| `parent_exclude`  | array   | Limit result set to all items except those of a particular parent ID.                                                                    |
+| Parameter         | Type    | Description                                                                                                                                                                              |
+|-------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `context`         | string  | Scope under which the request is made; determines fields present in response. Options: `view` and `edit`. Default is `view`.                                                             |
+| `page`            | integer | Current page of the collection. Default is `1`.                                                                                                                                          |
+| `per_page`        | integer | Maximum number of items to be returned in result set. Default is `10`.                                                                                                                   |
+| `search`          | string  | Limit results to those matching a string.                                                                                                                                                |
+| `after`           | string  | Limit response to resources published after a given ISO8601 compliant date.                                                                                                              |
+| `before`          | string  | Limit response to resources published before a given ISO8601 compliant date.                                                                                                             |
+| `modified_after`  | string  | Limit response to resources modified after a given ISO8601 compliant date.                                                                                                               |
+| `modified_before` | string  | Limit response to resources modified after a given ISO8601 compliant date.                                                                                                               |
+| `dates_are_gmt`   | boolean | Whether to consider GMT post dates when limiting response by published or modified date.                                                                                                 |
+| `exclude`         | array   | Ensure result set excludes specific IDs.                                                                                                                                                 |
+| `include`         | array   | Limit result set to specific ids.                                                                                                                                                        |
+| `offset`          | integer | Offset the result set by a specific number of items.                                                                                                                                     |
+| `order`           | string  | Order sort attribute ascending or descending. Options: `asc` and `desc`. Default is `desc`.                                                                                              |
+| `orderby`         | string  | Sort collection by object attribute. Options: `date`, `modified`, `id`, `include`, `title` and `slug`. Default is `date`.                                                                |
+| `parent`          | array   | Limit result set to those of particular parent IDs.                                                                                                                                      |
+| `parent_exclude`  | array   | Limit result set to all items except those of a particular parent ID.                                                                                                                    |
 | `status`          | array   | Limit result set to orders assigned a specific status. Options: `any`, `pending`, `processing`, `on-hold`, `completed`, `cancelled`, `refunded`, `failed` and `trash`. Default is `any`. |
-| `customer`        | integer | Limit result set to orders assigned a specific customer.                                                                                 |
-| `product`         | integer | Limit result set to orders assigned a specific product.                                                                                  |
-| `dp`              | integer | Number of decimal points to use in each resource. Default is `2`.                                                                        |
+| `customer`        | integer | Limit result set to orders assigned a specific customer.                                                                                                                                 |
+| `product`         | integer | Limit result set to orders assigned a specific product.                                                                                                                                  |
+| `dp`              | integer | Number of decimal points to use in each resource. Default is `2`.                                                                                                                        |
 
 ## Update an Order ##
 

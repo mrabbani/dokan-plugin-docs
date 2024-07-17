@@ -108,7 +108,7 @@ The products API allows you to create, view, update, and delete individual, or a
 
 | Attribute           | Type      | Description                                                                                             |
 |---------------------|-----------|---------------------------------------------------------------------------------------------------------|
-| `id`                | integer   | Image ID.                                                                                               |
+| `id`                | integer   | The attachment ID from the Media Library.                                                               |
 | `date_created`      | date-time | The date the image was created, in the site's timezone. <i class="label label-info">read-only</i>       |
 | `date_created_gmt`  | date-time | The date the image was created, as GMT. <i class="label label-info">read-only</i>                       |
 | `date_modified`     | date-time | The date the image was last modified, in the site's timezone. <i class="label label-info">read-only</i> |
@@ -157,7 +157,7 @@ This API helps you to create a new product.
 	</div>
 </div>
 
-> Example of how to create a `simple` product:
+> Example of how to create a `simple` product with one existing image and one new image:
 
 ```shell
 curl -X POST https://example.com/wp-json/wc/v3/products \
@@ -179,7 +179,7 @@ curl -X POST https://example.com/wp-json/wc/v3/products \
   ],
   "images": [
     {
-      "src": "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg"
+      "id": 42
     },
     {
       "src": "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_back.jpg"
@@ -205,7 +205,7 @@ const data = {
   ],
   images: [
     {
-      src: "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg"
+	  id: 42
     },
     {
       src: "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_back.jpg"
@@ -240,7 +240,7 @@ $data = [
     ],
     'images' => [
         [
-            'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg'
+            'id': 42
         ],
         [
             'src' => 'http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_back.jpg'
@@ -269,7 +269,7 @@ data = {
     ],
     "images": [
         {
-            "src": "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg"
+            "id": 42
         },
         {
             "src": "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_back.jpg"
@@ -297,7 +297,7 @@ data = {
   ],
   images: [
     {
-      src: "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg"
+      id: 42
     },
     {
       src: "http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_back.jpg",
@@ -393,11 +393,11 @@ woocommerce.post("products", data).parsed_response
   "tags": [],
   "images": [
     {
-      "id": 792,
-      "date_created": "2017-03-23T14:01:13",
-      "date_created_gmt": "2017-03-23T20:01:13",
-      "date_modified": "2017-03-23T14:01:13",
-      "date_modified_gmt": "2017-03-23T20:01:13",
+      "id": 42,
+      "date_created": "2017-03-22T14:01:13",
+      "date_created_gmt": "2017-03-22T20:01:13",
+      "date_modified": "2017-03-22T14:01:13",
+      "date_modified_gmt": "2017-03-22T20:01:13",
       "src": "https://example.com/wp-content/uploads/2017/03/T_2_front-4.jpg",
       "name": "",
       "alt": ""
@@ -1461,39 +1461,39 @@ woocommerce.get("products").parsed_response
 
 #### Available parameters ####
 
-| Parameter         | Type    | Description                                                                                                                             |
-|-------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| `context`         | string  | Scope under which the request is made; determines fields present in response. Options: `view` and `edit`. Default is `view`.            |
-| `page`            | integer | Current page of the collection. Default is `1`.                                                                                         |
-| `per_page`        | integer | Maximum number of items to be returned in result set. Default is `10`.                                                                  |
-| `search`          | string  | Limit results to those matching a string.                                                                                               |
-| `after`           | string  | Limit response to resources published after a given ISO8601 compliant date.                                                             |
-| `before`          | string  | Limit response to resources published before a given ISO8601 compliant date.                                                            |
-| `modified_after`  | string  | Limit response to resources modified after a given ISO8601 compliant date.                                                              |
-| `modified_before` | string  | Limit response to resources modified after a given ISO8601 compliant date.                                                              |
-| `dates_are_gmt`   | boolean | Whether to consider GMT post dates when limiting response by published or modified date.                                                |
-| `exclude`         | array   | Ensure result set excludes specific IDs.                                                                                                |
-| `include`         | array   | Limit result set to specific ids.                                                                                                       |
-| `offset`          | integer | Offset the result set by a specific number of items.                                                                                    |
-| `order`           | string  | Order sort attribute ascending or descending. Options: `asc` and `desc`. Default is `desc`.                                             |
-| `orderby`         | string  | Sort collection by object attribute. Options: `date`, `id`, `include`, `title`, `slug`, `price`, `popularity` and `rating`. Default is `date`. |
-| `parent`          | array   | Limit result set to those of particular parent IDs.                                                                                     |
-| `parent_exclude`  | array   | Limit result set to all items except those of a particular parent ID.                                                                   |
-| `slug`            | string  | Limit result set to products with a specific slug.                                                                                      |
-| `status`          | string  | Limit result set to products assigned a specific status. Options: `any`, `draft`, `pending`, `private` and `publish`. Default is `any`. |
-| `type`            | string  | Limit result set to products assigned a specific type. Options: `simple`, `grouped`, `external` and `variable`.                         |
-| `sku`             | string  | Limit result set to products with a specific SKU.                                                                                       |
-| `featured`        | boolean | Limit result set to featured products.                                                                                                  |
-| `category`        | string  | Limit result set to products assigned a specific category ID.                                                                           |
-| `tag`             | string  | Limit result set to products assigned a specific tag ID.                                                                                |
-| `shipping_class`  | string  | Limit result set to products assigned a specific shipping class ID.                                                                     |
-| `attribute`       | string  | Limit result set to products with a specific attribute.                                                                                 |
-| `attribute_term`  | string  | Limit result set to products with a specific attribute term ID (required an assigned attribute).                                        |
-| `tax_class`       | string  | Limit result set to products with a specific tax class. Default options: `standard`, `reduced-rate` and `zero-rate`.                    |
-| `on_sale`         | boolean | Limit result set to products on sale.                                                                                                   |
-| `min_price`       | string  | Limit result set to products based on a minimum price.                                                                                  |
-| `max_price`       | string  | Limit result set to products based on a maximum price.                                                                                  |
-| `stock_status`    | string  | Limit result set to products with specified stock status. Options: `instock`, `outofstock` and `onbackorder`.                           |
+| Parameter         | Type    | Description                                                                                                                                                               |
+|-------------------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `context`         | string  | Scope under which the request is made; determines fields present in response. Options: `view` and `edit`. Default is `view`.                                              |
+| `page`            | integer | Current page of the collection. Default is `1`.                                                                                                                           |
+| `per_page`        | integer | Maximum number of items to be returned in result set. Default is `10`.                                                                                                    |
+| `search`          | string  | Limit results to those matching a string.                                                                                                                                 |
+| `after`           | string  | Limit response to resources published after a given ISO8601 compliant date.                                                                                               |
+| `before`          | string  | Limit response to resources published before a given ISO8601 compliant date.                                                                                              |
+| `modified_after`  | string  | Limit response to resources modified after a given ISO8601 compliant date.                                                                                                |
+| `modified_before` | string  | Limit response to resources modified after a given ISO8601 compliant date.                                                                                                |
+| `dates_are_gmt`   | boolean | Whether to consider GMT post dates when limiting response by published or modified date.                                                                                  |
+| `exclude`         | array   | Ensure result set excludes specific IDs.                                                                                                                                  |
+| `include`         | array   | Limit result set to specific ids.                                                                                                                                         |
+| `offset`          | integer | Offset the result set by a specific number of items.                                                                                                                      |
+| `order`           | string  | Order sort attribute ascending or descending. Options: `asc` and `desc`. Default is `desc`.                                                                               |
+| `orderby`         | string  | Sort collection by object attribute. Options: `date`, `modified`, `id`, `include`, `title`, `slug`, `price`, `popularity`, `rating`, and `menu_order`. Default is `date`. |
+| `parent`          | array   | Limit result set to those of particular parent IDs.                                                                                                                       |
+| `parent_exclude`  | array   | Limit result set to all items except those of a particular parent ID.                                                                                                     |
+| `slug`            | string  | Limit result set to products with a specific slug.                                                                                                                        |
+| `status`          | string  | Limit result set to products assigned a specific status. Options: `any`, `draft`, `pending`, `private` and `publish`. Default is `any`.                                   |
+| `type`            | string  | Limit result set to products assigned a specific type. Options: `simple`, `grouped`, `external` and `variable`.                                                           |
+| `sku`             | string  | Limit result set to products with a specific SKU.                                                                                                                         |
+| `featured`        | boolean | Limit result set to featured products.                                                                                                                                    |
+| `category`        | string  | Limit result set to products assigned a specific category ID.                                                                                                             |
+| `tag`             | string  | Limit result set to products assigned a specific tag ID.                                                                                                                  |
+| `shipping_class`  | string  | Limit result set to products assigned a specific shipping class ID.                                                                                                       |
+| `attribute`       | string  | Limit result set to products with a specific attribute.                                                                                                                   |
+| `attribute_term`  | string  | Limit result set to products with a specific attribute term ID (required an assigned attribute).                                                                          |
+| `tax_class`       | string  | Limit result set to products with a specific tax class. Default options: `standard`, `reduced-rate` and `zero-rate`.                                                      |
+| `on_sale`         | boolean | Limit result set to products on sale.                                                                                                                                     |
+| `min_price`       | string  | Limit result set to products based on a minimum price.                                                                                                                    |
+| `max_price`       | string  | Limit result set to products based on a maximum price.                                                                                                                    |
+| `stock_status`    | string  | Limit result set to products with specified stock status. Options: `instock`, `outofstock` and `onbackorder`.                                                             |
 
 ## Duplicate product ##
 
