@@ -1,4 +1,5 @@
 # BLOCKS/PRODUCTS/{ID}
+## /BLOCKS/PRODUCTS/{ID}
 ### ***GET*** 
 
 ### HTTP Request 

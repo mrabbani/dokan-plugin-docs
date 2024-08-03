@@ -1,4 +1,5 @@
 # SPMV-PRODUCT/SETTINGS
+## /SPMV-PRODUCT/SETTINGS
 ### ***GET*** 
 
 ### HTTP Request 

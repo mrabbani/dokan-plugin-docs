@@ -1,4 +1,5 @@
 # SETTINGS
+## /SETTINGS
 ### ***GET*** 
 
 ### HTTP Request 

@@ -1,4 +1,5 @@
 # VENDOR-DASHBOARD
+## /VENDOR-DASHBOARD
 ### ***GET*** 
 
 ### HTTP Request 

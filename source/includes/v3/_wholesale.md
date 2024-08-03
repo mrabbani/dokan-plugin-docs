@@ -1,4 +1,5 @@
 # WHOLESALE/REGISTER
+## /WHOLESALE/REGISTER
 ### ***POST*** 
 
 ### HTTP Request 

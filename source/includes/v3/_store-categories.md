@@ -1,4 +1,5 @@
 # STORE-CATEGORIES
+## /STORE-CATEGORIES
 ### ***GET*** 
 
 ### HTTP Request 

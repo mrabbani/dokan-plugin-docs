@@ -1,4 +1,5 @@
 # STORES
+## /STORES
 ### ***GET*** 
 
 ### HTTP Request 

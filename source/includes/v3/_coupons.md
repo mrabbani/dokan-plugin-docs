@@ -1,4 +1,5 @@
 # COUPONS
+## /COUPONS
 ### ***GET*** 
 
 ### HTTP Request 
