@@ -1,27 +1,3 @@
---- 
-
-title: WordPress REST API - dokan/v1 
-
-language_tabs: 
-   - shell 
-
-toc_footers: 
-   - <a href='#'>Sign Up for a Developer Key</a> 
-   - <a href='https://github.com/lavkumarv'>Documentation Powered by lav</a> 
-
-includes: 
-   - errors 
-
-search: true 
-
---- 
-
-# Introduction 
-
-API documentation for the dokan/v1 namespace 
-
-**Version:** 1.0.0 
-
 # /VENDOR-STAFF
 ## ***GET*** 
 
