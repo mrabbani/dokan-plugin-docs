@@ -1,5 +1,5 @@
-# /PRODUCT_ADV
-## ***GET*** 
+# PRODUCT_ADV
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /product_adv` 
@@ -28,8 +28,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCT_ADV/{ID}/EXPIRE
-## ***POST*** 
+## /PRODUCT_ADV/{ID}/EXPIRE
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /product_adv/{id}/expire` 
@@ -48,7 +48,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /product_adv/{id}/expire` 
@@ -67,7 +67,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /product_adv/{id}/expire` 
@@ -86,8 +86,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCT_ADV/{ID}
-## ***DELETE*** 
+## /PRODUCT_ADV/{ID}
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /product_adv/{id}` 
@@ -106,8 +106,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCT_ADV/BATCH
-## ***POST*** 
+## /PRODUCT_ADV/BATCH
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /product_adv/batch` 
@@ -128,7 +128,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /product_adv/batch` 
@@ -149,7 +149,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /product_adv/batch` 
@@ -170,8 +170,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCT_ADV/STORES
-## ***GET*** 
+## /PRODUCT_ADV/STORES
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /product_adv/stores` 
@@ -193,8 +193,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCT_ADV/CREATE
-## ***POST*** 
+## /PRODUCT_ADV/CREATE
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /product_adv/create` 

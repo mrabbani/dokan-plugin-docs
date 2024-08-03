@@ -1,5 +1,5 @@
-# /REPORTS/SALES_OVERVIEW
-## ***GET*** 
+# REPORTS/SALES_OVERVIEW
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /reports/sales_overview` 
@@ -20,8 +20,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REPORTS/TOP_SELLING
-## ***GET*** 
+## /REPORTS/TOP_SELLING
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /reports/top_selling` 
@@ -42,8 +42,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REPORTS/TOP_EARNERS
-## ***GET*** 
+## /REPORTS/TOP_EARNERS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /reports/top_earners` 
@@ -64,8 +64,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REPORTS/SUMMARY
-## ***GET*** 
+## /REPORTS/SUMMARY
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /reports/summary` 

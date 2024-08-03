@@ -1,5 +1,5 @@
-# /DUMMY-DATA/STATUS
-## ***GET*** 
+# DUMMY-DATA/STATUS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /dummy-data/status` 
@@ -12,8 +12,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /DUMMY-DATA/IMPORT
-## ***POST*** 
+## /DUMMY-DATA/IMPORT
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /dummy-data/import` 
@@ -36,8 +36,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /DUMMY-DATA/CLEAR
-## ***DELETE*** 
+## /DUMMY-DATA/CLEAR
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /dummy-data/clear` 

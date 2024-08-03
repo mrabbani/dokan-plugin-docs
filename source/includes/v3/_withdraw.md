@@ -1,5 +1,5 @@
-# /WITHDRAW
-## ***GET*** 
+# WITHDRAW
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /withdraw` 
@@ -23,7 +23,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /withdraw` 
@@ -46,8 +46,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /WITHDRAW/BALANCE
-## ***GET*** 
+## /WITHDRAW/BALANCE
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /withdraw/balance` 
@@ -60,8 +60,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /WITHDRAW/{ID}
-## ***GET*** 
+## /WITHDRAW/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /withdraw/{id}` 
@@ -80,7 +80,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /withdraw/{id}` 
@@ -104,7 +104,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /withdraw/{id}` 
@@ -128,7 +128,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /withdraw/{id}` 
@@ -152,7 +152,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***DELETE*** 
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /withdraw/{id}` 
@@ -171,8 +171,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /WITHDRAW/PAYMENT_METHODS
-## ***GET*** 
+## /WITHDRAW/PAYMENT_METHODS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /withdraw/payment_methods` 
@@ -185,8 +185,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /WITHDRAW/BATCH
-## ***POST*** 
+## /WITHDRAW/BATCH
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /withdraw/batch` 
@@ -207,7 +207,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /withdraw/batch` 
@@ -228,7 +228,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /withdraw/batch` 
@@ -249,8 +249,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /WITHDRAW/CHARGES
-## ***GET*** 
+## /WITHDRAW/CHARGES
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /withdraw/charges` 
@@ -263,8 +263,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /WITHDRAW/CHARGE
-## ***GET*** 
+## /WITHDRAW/CHARGE
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /withdraw/charge` 

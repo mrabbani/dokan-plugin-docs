@@ -1,5 +1,5 @@
-# /COUPONS
-## ***GET*** 
+# COUPONS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /coupons` 
@@ -22,7 +22,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /coupons` 
@@ -60,8 +60,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /COUPONS/{ID}
-## ***GET*** 
+## /COUPONS/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /coupons/{id}` 
@@ -81,7 +81,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /coupons/{id}` 
@@ -120,7 +120,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /coupons/{id}` 
@@ -159,7 +159,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /coupons/{id}` 
@@ -198,7 +198,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***DELETE*** 
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /coupons/{id}` 

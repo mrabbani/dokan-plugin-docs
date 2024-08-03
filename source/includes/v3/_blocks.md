@@ -1,5 +1,5 @@
-# /BLOCKS/PRODUCTS/{ID}
-## ***GET*** 
+# BLOCKS/PRODUCTS/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /blocks/products/{id}` 

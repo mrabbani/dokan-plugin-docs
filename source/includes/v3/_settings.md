@@ -1,5 +1,5 @@
-# /SETTINGS
-## ***GET*** 
+# SETTINGS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /settings` 
@@ -12,7 +12,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /settings` 
@@ -25,7 +25,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /settings` 
@@ -38,7 +38,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /settings` 
@@ -51,8 +51,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/NOTICES/ADMIN
-## ***GET*** 
+## /ADMIN/NOTICES/ADMIN
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /admin/notices/admin` 
@@ -65,8 +65,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/NOTICES/PROMO
-## ***GET*** 
+## /ADMIN/NOTICES/PROMO
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /admin/notices/promo` 
@@ -79,8 +79,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/CHANGELOG/LITE
-## ***GET*** 
+## /ADMIN/CHANGELOG/LITE
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /admin/changelog/lite` 

@@ -1,5 +1,5 @@
-# /STORES
-## ***GET*** 
+# STORES
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /stores` 
@@ -26,7 +26,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /stores` 
@@ -39,8 +39,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /STORES/{ID}
-## ***GET*** 
+## /STORES/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /stores/{id}` 
@@ -59,7 +59,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***DELETE*** 
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /stores/{id}` 
@@ -79,7 +79,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /stores/{id}` 
@@ -98,7 +98,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /stores/{id}` 
@@ -117,7 +117,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /stores/{id}` 
@@ -136,8 +136,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /STORES/{ID}/PRODUCTS
-## ***GET*** 
+## /STORES/{ID}/PRODUCTS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /stores/{id}/products` 
@@ -160,8 +160,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /STORES/{ID}/REVIEWS
-## ***GET*** 
+## /STORES/{ID}/REVIEWS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /stores/{id}/reviews` 
@@ -184,7 +184,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /stores/{id}/reviews` 
@@ -206,8 +206,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /STORES/CHECK
-## ***GET*** 
+## /STORES/CHECK
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /stores/check` 
@@ -220,8 +220,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /STORES/{ID}/CONTACT
-## ***POST*** 
+## /STORES/{ID}/CONTACT
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /stores/{id}/contact` 
@@ -243,8 +243,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /STORES/{ID}/STATUS
-## ***POST*** 
+## /STORES/{ID}/STATUS
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /stores/{id}/status` 
@@ -264,7 +264,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /stores/{id}/status` 
@@ -284,7 +284,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /stores/{id}/status` 
@@ -304,8 +304,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /STORES/BATCH
-## ***POST*** 
+## /STORES/BATCH
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /stores/batch` 
@@ -318,7 +318,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /stores/batch` 
@@ -331,7 +331,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /stores/batch` 
@@ -344,8 +344,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /STORES/{ID}/CATEGORIES
-## ***GET*** 
+## /STORES/{ID}/CATEGORIES
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /stores/{id}/categories` 

@@ -1,5 +1,5 @@
-# /VENDOR-STAFF
-## ***GET*** 
+# VENDOR-STAFF
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /vendor-staff` 
@@ -21,7 +21,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /vendor-staff` 
@@ -47,8 +47,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /VENDOR-STAFF/{ID}
-## ***GET*** 
+## /VENDOR-STAFF/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /vendor-staff/{id}` 
@@ -67,7 +67,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /vendor-staff/{id}` 
@@ -93,7 +93,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /vendor-staff/{id}` 
@@ -119,7 +119,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /vendor-staff/{id}` 
@@ -145,7 +145,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***DELETE*** 
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /vendor-staff/{id}` 
@@ -164,8 +164,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /VENDOR-STAFF/{ID}/CAPABILITIES
-## ***GET*** 
+## /VENDOR-STAFF/{ID}/CAPABILITIES
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /vendor-staff/{id}/capabilities` 
@@ -178,7 +178,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /vendor-staff/{id}/capabilities` 
@@ -197,7 +197,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /vendor-staff/{id}/capabilities` 
@@ -216,7 +216,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /vendor-staff/{id}/capabilities` 
@@ -235,8 +235,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /VENDOR-STAFF/CAPABILITIES
-## ***GET*** 
+## /VENDOR-STAFF/CAPABILITIES
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /vendor-staff/capabilities` 

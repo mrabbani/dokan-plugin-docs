@@ -1,5 +1,5 @@
-# /REFUNDS
-## ***GET*** 
+# REFUNDS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /refunds` 
@@ -24,8 +24,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REFUNDS/{ID}/APPROVE
-## ***POST*** 
+## /REFUNDS/{ID}/APPROVE
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /refunds/{id}/approve` 
@@ -44,7 +44,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /refunds/{id}/approve` 
@@ -63,7 +63,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /refunds/{id}/approve` 
@@ -82,8 +82,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REFUNDS/{ID}/CANCEL
-## ***POST*** 
+## /REFUNDS/{ID}/CANCEL
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /refunds/{id}/cancel` 
@@ -102,7 +102,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /refunds/{id}/cancel` 
@@ -121,7 +121,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /refunds/{id}/cancel` 
@@ -140,8 +140,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REFUNDS/{ID}
-## ***DELETE*** 
+## /REFUNDS/{ID}
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /refunds/{id}` 
@@ -160,8 +160,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REFUNDS/BATCH
-## ***POST*** 
+## /REFUNDS/BATCH
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /refunds/batch` 
@@ -181,7 +181,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /refunds/batch` 
@@ -201,7 +201,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /refunds/batch` 
@@ -221,8 +221,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/CHANGELOG/PRO
-## ***GET*** 
+## /ADMIN/CHANGELOG/PRO
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /admin/changelog/pro` 
@@ -235,8 +235,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /VENDOR-DASHBOARD/PROFILE-PROGRESSBAR
-## ***GET*** 
+## /VENDOR-DASHBOARD/PROFILE-PROGRESSBAR
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /vendor-dashboard/profile-progressbar` 
@@ -249,8 +249,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /BLOCKS/PRODUCT-VARIATION/{ID}
-## ***GET*** 
+## /BLOCKS/PRODUCT-VARIATION/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /blocks/product-variation/{id}` 

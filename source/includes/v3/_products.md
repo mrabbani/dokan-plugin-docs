@@ -1,5 +1,5 @@
-# /PRODUCTS
-## ***GET*** 
+# PRODUCTS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /products` 
@@ -22,7 +22,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /products` 
@@ -86,8 +86,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/{ID}
-## ***GET*** 
+## /PRODUCTS/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /products/{id}` 
@@ -110,7 +110,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /products/{id}` 
@@ -174,7 +174,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /products/{id}` 
@@ -238,7 +238,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /products/{id}` 
@@ -302,7 +302,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***DELETE*** 
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /products/{id}` 
@@ -322,8 +322,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/SUMMARY
-## ***GET*** 
+## /PRODUCTS/SUMMARY
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /products/summary` 
@@ -336,8 +336,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/{ID}/RELATED
-## ***GET*** 
+## /PRODUCTS/{ID}/RELATED
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /products/{id}/related` 
@@ -357,8 +357,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/TOP_RATED
-## ***GET*** 
+## /PRODUCTS/TOP_RATED
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /products/top_rated` 
@@ -379,8 +379,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/BEST_SELLING
-## ***GET*** 
+## /PRODUCTS/BEST_SELLING
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /products/best_selling` 
@@ -401,8 +401,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/FEATURED
-## ***GET*** 
+## /PRODUCTS/FEATURED
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /products/featured` 
@@ -423,8 +423,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/LATEST
-## ***GET*** 
+## /PRODUCTS/LATEST
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /products/latest` 
@@ -445,8 +445,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/MULTISTEP-CATEGORIES
-## ***GET*** 
+## /PRODUCTS/MULTISTEP-CATEGORIES
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /products/multistep-categories` 
@@ -459,8 +459,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/ATTRIBUTES
-## ***GET*** 
+## /PRODUCTS/ATTRIBUTES
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /products/attributes` 
@@ -479,7 +479,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /products/attributes` 
@@ -502,8 +502,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/ATTRIBUTES/{ID}
-## ***GET*** 
+## /PRODUCTS/ATTRIBUTES/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /products/attributes/{id}` 
@@ -523,7 +523,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /products/attributes/{id}` 
@@ -547,7 +547,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /products/attributes/{id}` 
@@ -571,7 +571,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /products/attributes/{id}` 
@@ -595,7 +595,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***DELETE*** 
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /products/attributes/{id}` 
@@ -615,8 +615,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/ATTRIBUTES/BATCH
-## ***POST*** 
+## /PRODUCTS/ATTRIBUTES/BATCH
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /products/attributes/batch` 
@@ -639,7 +639,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /products/attributes/batch` 
@@ -662,7 +662,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /products/attributes/batch` 
@@ -685,8 +685,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/ATTRIBUTES/EDIT-PRODUCT/{ID}
-## ***POST*** 
+## /PRODUCTS/ATTRIBUTES/EDIT-PRODUCT/{ID}
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /products/attributes/edit-product/{id}` 
@@ -705,7 +705,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /products/attributes/edit-product/{id}` 
@@ -724,7 +724,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /products/attributes/edit-product/{id}` 
@@ -743,8 +743,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/ATTRIBUTES/SET-DEFAULT/{ID}
-## ***POST*** 
+## /PRODUCTS/ATTRIBUTES/SET-DEFAULT/{ID}
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /products/attributes/set-default/{id}` 
@@ -763,7 +763,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /products/attributes/set-default/{id}` 
@@ -782,7 +782,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /products/attributes/set-default/{id}` 
@@ -801,8 +801,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/ATTRIBUTES/{ATTRIBUTE_ID}/TERMS
-## ***GET*** 
+## /PRODUCTS/ATTRIBUTES/{ATTRIBUTE_ID}/TERMS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /products/attributes/{attribute_id}/terms` 
@@ -834,7 +834,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /products/attributes/{attribute_id}/terms` 
@@ -857,8 +857,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/ATTRIBUTES/{ATTRIBUTE_ID}/TERMS/{ID}
-## ***GET*** 
+## /PRODUCTS/ATTRIBUTES/{ATTRIBUTE_ID}/TERMS/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /products/attributes/{attribute_id}/terms/{id}` 
@@ -879,7 +879,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /products/attributes/{attribute_id}/terms/{id}` 
@@ -903,7 +903,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /products/attributes/{attribute_id}/terms/{id}` 
@@ -927,7 +927,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /products/attributes/{attribute_id}/terms/{id}` 
@@ -951,7 +951,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***DELETE*** 
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /products/attributes/{attribute_id}/terms/{id}` 
@@ -972,8 +972,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/ATTRIBUTES/{ATTRIBUTE_ID}/TERMS/BATCH
-## ***POST*** 
+## /PRODUCTS/ATTRIBUTES/{ATTRIBUTE_ID}/TERMS/BATCH
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /products/attributes/{attribute_id}/terms/batch` 
@@ -996,7 +996,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /products/attributes/{attribute_id}/terms/batch` 
@@ -1019,7 +1019,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /products/attributes/{attribute_id}/terms/batch` 

@@ -1,5 +1,5 @@
-# /ABUSE-REPORTS
-## ***GET*** 
+# ABUSE-REPORTS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /abuse-reports` 
@@ -12,8 +12,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ABUSE-REPORTS/{ID}
-## ***DELETE*** 
+## /ABUSE-REPORTS/{ID}
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /abuse-reports/{id}` 
@@ -32,8 +32,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ABUSE-REPORTS/BATCH
-## ***DELETE*** 
+## /ABUSE-REPORTS/BATCH
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /abuse-reports/batch` 
@@ -46,8 +46,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ABUSE-REPORTS/ABUSE-REASONS
-## ***GET*** 
+## /ABUSE-REPORTS/ABUSE-REASONS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /abuse-reports/abuse-reasons` 

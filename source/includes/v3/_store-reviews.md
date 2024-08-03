@@ -1,5 +1,5 @@
-# /STORE-REVIEWS
-## ***GET*** 
+# STORE-REVIEWS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /store-reviews` 
@@ -22,8 +22,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /STORE-REVIEWS/{ID}
-## ***GET*** 
+## /STORE-REVIEWS/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /store-reviews/{id}` 
@@ -42,7 +42,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /store-reviews/{id}` 
@@ -61,7 +61,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /store-reviews/{id}` 
@@ -80,7 +80,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /store-reviews/{id}` 
@@ -99,7 +99,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***DELETE*** 
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /store-reviews/{id}` 
@@ -119,8 +119,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /STORE-REVIEWS/{ID}/RESTORE
-## ***POST*** 
+## /STORE-REVIEWS/{ID}/RESTORE
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /store-reviews/{id}/restore` 
@@ -139,7 +139,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /store-reviews/{id}/restore` 
@@ -158,7 +158,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /store-reviews/{id}/restore` 
@@ -177,8 +177,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /STORE-REVIEWS/BATCH
-## ***POST*** 
+## /STORE-REVIEWS/BATCH
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /store-reviews/batch` 
@@ -191,7 +191,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /store-reviews/batch` 
@@ -204,7 +204,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /store-reviews/batch` 
@@ -217,8 +217,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/SUPPORT-TICKET
-## ***GET*** 
+## /ADMIN/SUPPORT-TICKET
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /admin/support-ticket` 
@@ -244,8 +244,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/SUPPORT-TICKET/BATCH
-## ***POST*** 
+## /ADMIN/SUPPORT-TICKET/BATCH
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /admin/support-ticket/batch` 
@@ -258,7 +258,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /admin/support-ticket/batch` 
@@ -271,7 +271,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /admin/support-ticket/batch` 
@@ -284,8 +284,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/SUPPORT-TICKET/CUSTOMERS
-## ***GET*** 
+## /ADMIN/SUPPORT-TICKET/CUSTOMERS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /admin/support-ticket/customers` 
@@ -298,8 +298,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/SUPPORT-TICKET/{ID}
-## ***GET*** 
+## /ADMIN/SUPPORT-TICKET/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /admin/support-ticket/{id}` 
@@ -318,7 +318,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /admin/support-ticket/{id}` 
@@ -340,8 +340,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/SUPPORT-TICKET/{ID}/STATUS
-## ***POST*** 
+## /ADMIN/SUPPORT-TICKET/{ID}/STATUS
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /admin/support-ticket/{id}/status` 
@@ -361,8 +361,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/SUPPORT-TICKET/{ID}/COMMENT
-## ***DELETE*** 
+## /ADMIN/SUPPORT-TICKET/{ID}/COMMENT
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /admin/support-ticket/{id}/comment` 
@@ -381,8 +381,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/SUPPORT-TICKET/{ID}/EMAIL-NOTIFICATION
-## ***POST*** 
+## /ADMIN/SUPPORT-TICKET/{ID}/EMAIL-NOTIFICATION
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /admin/support-ticket/{id}/email-notification` 

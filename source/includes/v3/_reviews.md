@@ -1,5 +1,5 @@
-# /REVIEWS
-## ***GET*** 
+# REVIEWS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /reviews` 
@@ -21,8 +21,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REVIEWS/SUMMARY
-## ***GET*** 
+## /REVIEWS/SUMMARY
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /reviews/summary` 
@@ -44,8 +44,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REVIEWS/{ID}
-## ***POST*** 
+## /REVIEWS/{ID}
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /reviews/{id}` 
@@ -65,7 +65,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /reviews/{id}` 
@@ -85,7 +85,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /reviews/{id}` 
@@ -105,8 +105,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/{PRODUCT_ID}/VARIATIONS
-## ***GET*** 
+## /PRODUCTS/{PRODUCT_ID}/VARIATIONS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /products/{product_id}/variations` 
@@ -129,7 +129,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /products/{product_id}/variations` 
@@ -175,8 +175,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/{PRODUCT_ID}/VARIATIONS/{ID}
-## ***GET*** 
+## /PRODUCTS/{PRODUCT_ID}/VARIATIONS/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /products/{product_id}/variations/{id}` 
@@ -196,7 +196,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /products/{product_id}/variations/{id}` 
@@ -243,7 +243,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /products/{product_id}/variations/{id}` 
@@ -290,7 +290,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /products/{product_id}/variations/{id}` 
@@ -337,7 +337,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***DELETE*** 
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /products/{product_id}/variations/{id}` 
@@ -357,8 +357,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /PRODUCTS/{PRODUCT_ID}/VARIATIONS/BATCH
-## ***POST*** 
+## /PRODUCTS/{PRODUCT_ID}/VARIATIONS/BATCH
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /products/{product_id}/variations/batch` 
@@ -404,7 +404,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /products/{product_id}/variations/batch` 
@@ -450,7 +450,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /products/{product_id}/variations/batch` 
@@ -496,8 +496,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /STORES/{ID}/STATS
-## ***GET*** 
+## /STORES/{ID}/STATS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /stores/{id}/stats` 
@@ -520,8 +520,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /STORES/{ID}/EMAIL
-## ***POST*** 
+## /STORES/{ID}/EMAIL
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /stores/{id}/email` 
@@ -546,8 +546,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /STORES/CURRENT-VISITOR
-## ***GET*** 
+## /STORES/CURRENT-VISITOR
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /stores/current-visitor` 
@@ -569,8 +569,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/MODULES
-## ***GET*** 
+## /ADMIN/MODULES
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /admin/modules` 
@@ -583,8 +583,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/MODULES/ACTIVATE
-## ***POST*** 
+## /ADMIN/MODULES/ACTIVATE
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /admin/modules/activate` 
@@ -603,7 +603,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /admin/modules/activate` 
@@ -622,7 +622,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /admin/modules/activate` 
@@ -641,8 +641,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/MODULES/DEACTIVATE
-## ***POST*** 
+## /ADMIN/MODULES/DEACTIVATE
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /admin/modules/deactivate` 
@@ -661,7 +661,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /admin/modules/deactivate` 
@@ -680,7 +680,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /admin/modules/deactivate` 

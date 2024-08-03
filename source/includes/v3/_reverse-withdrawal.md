@@ -1,5 +1,5 @@
-# /REVERSE-WITHDRAWAL/STORES-BALANCE
-## ***GET*** 
+# REVERSE-WITHDRAWAL/STORES-BALANCE
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /reverse-withdrawal/stores-balance` 
@@ -22,8 +22,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REVERSE-WITHDRAWAL/VENDOR-DUE-STATUS
-## ***GET*** 
+## /REVERSE-WITHDRAWAL/VENDOR-DUE-STATUS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /reverse-withdrawal/vendor-due-status` 
@@ -42,8 +42,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REVERSE-WITHDRAWAL/TRANSACTIONS
-## ***GET*** 
+## /REVERSE-WITHDRAWAL/TRANSACTIONS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /reverse-withdrawal/transactions` 
@@ -65,7 +65,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /reverse-withdrawal/transactions` 
@@ -89,8 +89,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REVERSE-WITHDRAWAL/TRANSACTION-TYPES
-## ***GET*** 
+## /REVERSE-WITHDRAWAL/TRANSACTION-TYPES
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /reverse-withdrawal/transaction-types` 
@@ -103,8 +103,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REVERSE-WITHDRAWAL/STORES
-## ***GET*** 
+## /REVERSE-WITHDRAWAL/STORES
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /reverse-withdrawal/stores` 
@@ -117,8 +117,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REVERSE-WITHDRAWAL/ADD-TO-CART
-## ***POST*** 
+## /REVERSE-WITHDRAWAL/ADD-TO-CART
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /reverse-withdrawal/add-to-cart` 

@@ -1,5 +1,5 @@
-# /ORDERS
-## ***GET*** 
+# ORDERS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /orders` 
@@ -25,8 +25,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ORDERS/{ID}
-## ***GET*** 
+## /ORDERS/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /orders/{id}` 
@@ -53,7 +53,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /orders/{id}` 
@@ -73,7 +73,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /orders/{id}` 
@@ -93,7 +93,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /orders/{id}` 
@@ -113,8 +113,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ORDERS/{ID}/NOTES
-## ***GET*** 
+## /ORDERS/{ID}/NOTES
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /orders/{id}/notes` 
@@ -141,7 +141,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /orders/{id}/notes` 
@@ -179,8 +179,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ORDERS/{ID}/NOTES/{NOTE_ID}
-## ***GET*** 
+## /ORDERS/{ID}/NOTES/{NOTE_ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /orders/{id}/notes/{note_id}` 
@@ -208,7 +208,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***DELETE*** 
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /orders/{id}/notes/{note_id}` 
@@ -236,8 +236,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ORDERS/SUMMARY
-## ***GET*** 
+## /ORDERS/SUMMARY
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /orders/summary` 

@@ -1,5 +1,5 @@
-# /ANNOUNCEMENT
-## ***GET*** 
+# ANNOUNCEMENT
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /announcement` 
@@ -26,7 +26,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /announcement` 
@@ -51,8 +51,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ANNOUNCEMENT/{ID}
-## ***GET*** 
+## /ANNOUNCEMENT/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /announcement/{id}` 
@@ -71,7 +71,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /announcement/{id}` 
@@ -90,7 +90,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /announcement/{id}` 
@@ -109,7 +109,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /announcement/{id}` 
@@ -128,7 +128,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***DELETE*** 
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /announcement/{id}` 
@@ -148,8 +148,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ANNOUNCEMENT/{ID}/RESTORE
-## ***POST*** 
+## /ANNOUNCEMENT/{ID}/RESTORE
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /announcement/{id}/restore` 
@@ -168,7 +168,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /announcement/{id}/restore` 
@@ -187,7 +187,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /announcement/{id}/restore` 
@@ -206,8 +206,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ANNOUNCEMENT/BATCH
-## ***POST*** 
+## /ANNOUNCEMENT/BATCH
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /announcement/batch` 
@@ -228,7 +228,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /announcement/batch` 
@@ -249,7 +249,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /announcement/batch` 
@@ -270,8 +270,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ANNOUNCEMENT/NOTICE/{ID}
-## ***GET*** 
+## /ANNOUNCEMENT/NOTICE/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /announcement/notice/{id}` 
@@ -290,7 +290,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /announcement/notice/{id}` 
@@ -310,7 +310,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /announcement/notice/{id}` 
@@ -330,7 +330,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /announcement/notice/{id}` 
@@ -350,7 +350,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***DELETE*** 
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /announcement/notice/{id}` 
@@ -369,8 +369,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/LOGS
-## ***GET*** 
+## /ADMIN/LOGS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /admin/logs` 
@@ -398,8 +398,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/LOGS/EXPORT
-## ***GET*** 
+## /ADMIN/LOGS/EXPORT
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /admin/logs/export` 

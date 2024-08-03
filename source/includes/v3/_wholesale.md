@@ -1,5 +1,5 @@
-# /WHOLESALE/REGISTER
-## ***POST*** 
+# WHOLESALE/REGISTER
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /wholesale/register` 
@@ -18,8 +18,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /WHOLESALE/CUSTOMERS
-## ***GET*** 
+## /WHOLESALE/CUSTOMERS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /wholesale/customers` 
@@ -41,8 +41,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /WHOLESALE/CUSTOMER/{ID}
-## ***POST*** 
+## /WHOLESALE/CUSTOMER/{ID}
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /wholesale/customer/{id}` 
@@ -62,7 +62,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /wholesale/customer/{id}` 
@@ -82,7 +82,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /wholesale/customer/{id}` 
@@ -102,8 +102,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /WHOLESALE/CUSTOMERS/BATCH
-## ***POST*** 
+## /WHOLESALE/CUSTOMERS/BATCH
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /wholesale/customers/batch` 
@@ -116,7 +116,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /wholesale/customers/batch` 
@@ -129,7 +129,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /wholesale/customers/batch` 

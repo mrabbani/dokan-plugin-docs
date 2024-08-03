@@ -1,5 +1,5 @@
-# /FOLLOW-STORE
-## ***GET*** 
+# FOLLOW-STORE
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /follow-store` 
@@ -19,7 +19,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /follow-store` 
@@ -39,8 +39,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /FOLLOW-STORE/FOLLOWERS
-## ***GET*** 
+## /FOLLOW-STORE/FOLLOWERS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /follow-store/followers` 

@@ -1,5 +1,5 @@
-# /VENDOR-DASHBOARD
-## ***GET*** 
+# VENDOR-DASHBOARD
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /vendor-dashboard` 
@@ -12,8 +12,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /VENDOR-DASHBOARD/PROFILE
-## ***GET*** 
+## /VENDOR-DASHBOARD/PROFILE
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /vendor-dashboard/profile` 
@@ -26,8 +26,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /VENDOR-DASHBOARD/SALES
-## ***GET*** 
+## /VENDOR-DASHBOARD/SALES
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /vendor-dashboard/sales` 
@@ -49,8 +49,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /VENDOR-DASHBOARD/PRODUCTS
-## ***GET*** 
+## /VENDOR-DASHBOARD/PRODUCTS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /vendor-dashboard/products` 
@@ -63,8 +63,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /VENDOR-DASHBOARD/ORDERS
-## ***GET*** 
+## /VENDOR-DASHBOARD/ORDERS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /vendor-dashboard/orders` 
@@ -89,8 +89,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /VENDOR-DASHBOARD/PREFERENCES
-## ***GET*** 
+## /VENDOR-DASHBOARD/PREFERENCES
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /vendor-dashboard/preferences` 

@@ -1,5 +1,5 @@
-# /SPMV-PRODUCT/SETTINGS
-## ***GET*** 
+# SPMV-PRODUCT/SETTINGS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /spmv-product/settings` 
@@ -12,8 +12,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /SPMV-PRODUCT/SEARCH
-## ***GET*** 
+## /SPMV-PRODUCT/SEARCH
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /spmv-product/search` 
@@ -36,8 +36,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /SPMV-PRODUCT/ADD-TO-STORE
-## ***POST*** 
+## /SPMV-PRODUCT/ADD-TO-STORE
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /spmv-product/add-to-store` 

@@ -1,5 +1,5 @@
-# /ADMIN
-## ***GET*** 
+# ADMIN
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /admin` 
@@ -19,8 +19,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/REPORT/SUMMARY
-## ***GET*** 
+## /ADMIN/REPORT/SUMMARY
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /admin/report/summary` 
@@ -33,8 +33,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/REPORT/OVERVIEW
-## ***GET*** 
+## /ADMIN/REPORT/OVERVIEW
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /admin/report/overview` 
@@ -47,8 +47,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/DASHBOARD/FEED
-## ***GET*** 
+## /ADMIN/DASHBOARD/FEED
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /admin/dashboard/feed` 
@@ -70,8 +70,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /ADMIN/HELP
-## ***GET*** 
+## /ADMIN/HELP
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /admin/help` 

@@ -1,5 +1,5 @@
-# /VERIFICATION-METHODS
-## ***GET*** 
+# VERIFICATION-METHODS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /verification-methods` 
@@ -22,7 +22,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /verification-methods` 
@@ -45,8 +45,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /VERIFICATION-METHODS/{ID}
-## ***GET*** 
+## /VERIFICATION-METHODS/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /verification-methods/{id}` 
@@ -65,7 +65,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /verification-methods/{id}` 
@@ -88,7 +88,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /verification-methods/{id}` 
@@ -111,7 +111,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /verification-methods/{id}` 
@@ -134,7 +134,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***DELETE*** 
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /verification-methods/{id}` 

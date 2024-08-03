@@ -1,5 +1,5 @@
-# /STORE-CATEGORIES
-## ***GET*** 
+# STORE-CATEGORIES
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /store-categories` 
@@ -29,7 +29,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /store-categories` 
@@ -51,8 +51,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /STORE-CATEGORIES/{ID}
-## ***GET*** 
+## /STORE-CATEGORIES/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /store-categories/{id}` 
@@ -72,7 +72,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /store-categories/{id}` 
@@ -95,7 +95,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /store-categories/{id}` 
@@ -118,7 +118,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /store-categories/{id}` 
@@ -141,7 +141,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***DELETE*** 
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /store-categories/{id}` 
@@ -161,8 +161,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /STORE-CATEGORIES/DEFAULT-CATEGORY
-## ***GET*** 
+## /STORE-CATEGORIES/DEFAULT-CATEGORY
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /store-categories/default-category` 
@@ -192,7 +192,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /store-categories/default-category` 
@@ -214,7 +214,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /store-categories/default-category` 
@@ -236,7 +236,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /store-categories/default-category` 

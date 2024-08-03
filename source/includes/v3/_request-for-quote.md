@@ -1,5 +1,5 @@
-# /REQUEST-FOR-QUOTE
-## ***GET*** 
+# REQUEST-FOR-QUOTE
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /request-for-quote` 
@@ -19,7 +19,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /request-for-quote` 
@@ -32,8 +32,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REQUEST-FOR-QUOTE/{ID}
-## ***GET*** 
+## /REQUEST-FOR-QUOTE/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /request-for-quote/{id}` 
@@ -52,7 +52,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /request-for-quote/{id}` 
@@ -71,7 +71,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /request-for-quote/{id}` 
@@ -90,7 +90,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /request-for-quote/{id}` 
@@ -109,7 +109,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***DELETE*** 
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /request-for-quote/{id}` 
@@ -128,8 +128,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REQUEST-FOR-QUOTE/{ID}/RESTORE
-## ***POST*** 
+## /REQUEST-FOR-QUOTE/{ID}/RESTORE
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /request-for-quote/{id}/restore` 
@@ -148,7 +148,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /request-for-quote/{id}/restore` 
@@ -167,7 +167,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /request-for-quote/{id}/restore` 
@@ -186,8 +186,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REQUEST-FOR-QUOTE/BATCH
-## ***POST*** 
+## /REQUEST-FOR-QUOTE/BATCH
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /request-for-quote/batch` 
@@ -210,7 +210,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /request-for-quote/batch` 
@@ -233,7 +233,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /request-for-quote/batch` 
@@ -256,8 +256,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REQUEST-FOR-QUOTE/CONVERT-TO-ORDER
-## ***POST*** 
+## /REQUEST-FOR-QUOTE/CONVERT-TO-ORDER
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /request-for-quote/convert-to-order` 
@@ -277,8 +277,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REQUEST-FOR-QUOTE/QUOTE-RULE
-## ***GET*** 
+## /REQUEST-FOR-QUOTE/QUOTE-RULE
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /request-for-quote/quote-rule` 
@@ -300,7 +300,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /request-for-quote/quote-rule` 
@@ -313,8 +313,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REQUEST-FOR-QUOTE/QUOTE-RULE/{ID}
-## ***GET*** 
+## /REQUEST-FOR-QUOTE/QUOTE-RULE/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /request-for-quote/quote-rule/{id}` 
@@ -333,7 +333,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /request-for-quote/quote-rule/{id}` 
@@ -352,7 +352,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /request-for-quote/quote-rule/{id}` 
@@ -371,7 +371,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /request-for-quote/quote-rule/{id}` 
@@ -390,7 +390,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***DELETE*** 
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /request-for-quote/quote-rule/{id}` 
@@ -409,8 +409,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REQUEST-FOR-QUOTE/QUOTE-RULE/BATCH
-## ***POST*** 
+## /REQUEST-FOR-QUOTE/QUOTE-RULE/BATCH
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /request-for-quote/quote-rule/batch` 
@@ -423,7 +423,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /request-for-quote/quote-rule/batch` 
@@ -436,7 +436,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /request-for-quote/quote-rule/batch` 
@@ -449,8 +449,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REQUEST-FOR-QUOTE/QUOTE-RULE/{ID}/RESTORE
-## ***POST*** 
+## /REQUEST-FOR-QUOTE/QUOTE-RULE/{ID}/RESTORE
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /request-for-quote/quote-rule/{id}/restore` 
@@ -469,7 +469,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /request-for-quote/quote-rule/{id}/restore` 
@@ -488,7 +488,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /request-for-quote/quote-rule/{id}/restore` 
@@ -507,8 +507,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REQUEST-FOR-QUOTE/CUSTOMERS
-## ***GET*** 
+## /REQUEST-FOR-QUOTE/CUSTOMERS
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /request-for-quote/customers` 
@@ -537,7 +537,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /request-for-quote/customers` 
@@ -563,8 +563,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REQUEST-FOR-QUOTE/CUSTOMERS/{ID}
-## ***GET*** 
+## /REQUEST-FOR-QUOTE/CUSTOMERS/{ID}
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /request-for-quote/customers/{id}` 
@@ -584,7 +584,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***POST*** 
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /request-for-quote/customers/{id}` 
@@ -611,7 +611,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /request-for-quote/customers/{id}` 
@@ -638,7 +638,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /request-for-quote/customers/{id}` 
@@ -665,7 +665,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***DELETE*** 
+### ***DELETE*** 
 
 ### HTTP Request 
 `***DELETE*** /request-for-quote/customers/{id}` 
@@ -686,8 +686,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REQUEST-FOR-QUOTE/CUSTOMERS/BATCH
-## ***POST*** 
+## /REQUEST-FOR-QUOTE/CUSTOMERS/BATCH
+### ***POST*** 
 
 ### HTTP Request 
 `***POST*** /request-for-quote/customers/batch` 
@@ -713,7 +713,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PUT*** 
+### ***PUT*** 
 
 ### HTTP Request 
 `***PUT*** /request-for-quote/customers/batch` 
@@ -739,7 +739,7 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-## ***PATCH*** 
+### ***PATCH*** 
 
 ### HTTP Request 
 `***PATCH*** /request-for-quote/customers/batch` 
@@ -765,8 +765,8 @@
 | 400 | Bad Request |
 | 404 | Not Found |
 
-# /REQUEST-FOR-QUOTE/ROLES
-## ***GET*** 
+## /REQUEST-FOR-QUOTE/ROLES
+### ***GET*** 
 
 ### HTTP Request 
 `***GET*** /request-for-quote/roles` 
