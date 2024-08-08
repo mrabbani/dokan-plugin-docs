@@ -1,262 +1,1103 @@
-# STORE-CATEGORIES
-## /STORE-CATEGORIES
-### ***GET*** 
+---
+title: null
+language_tabs:
+  - curl: CURL
+  - php: PHP
+  - python: Python
+  - ruby: Ruby
+toc_footers: []
+includes: []
+search: true
+highlight_theme: darkula
+headingLevel: 2
 
-### HTTP Request 
-`***GET*** /store-categories` 
+---
 
-**Parameters**
+<!-- Generator: Widdershins v4.0.1 -->
 
-| Name | Located in | Description | Required | Type |
-| ---- | ---------- | ----------- | -------- | ---- |
-| context | query | Scope under which the request is made; determines fields present in response. | No |  |
-| page | query | Current page of the collection. | No |  |
-| per_page | query | Maximum number of items to be returned in result set. | No |  |
-| search | query | Limit results to those matching a string. | No |  |
-| exclude | query | Ensure result set excludes specific IDs. | No |  |
-| include | query | Limit result set to specific IDs. | No |  |
-| offset | query | Offset the result set by a specific number of items. | No |  |
-| order | query | Order sort attribute ascending or descending. | No |  |
-| orderby | query | Sort collection by term attribute. | No |  |
-| hide_empty | query | Whether to hide terms not assigned to any posts. | No |  |
-| post | query | Limit result set to terms assigned to a specific post. | No |  |
-| slug | query | Limit result set to terms with one or more specific slugs. | No |  |
+<h1 id="">undefined vv1.0.0</h1>
 
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
-| 400 | Bad Request |
-| 404 | Not Found |
+> Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.
 
-### ***POST*** 
-
-### HTTP Request 
-`***POST*** /store-categories` 
+Base URLs:
 
-**Parameters**
+* <a href="http://dokan-sample.test">http://dokan-sample.test</a>
 
-| Name | Located in | Description | Required | Type |
-| ---- | ---------- | ----------- | -------- | ---- |
-| description | query | HTML description of the term. | No |  |
-| name | query | HTML title for the term. | Yes |  |
-| slug | query | An alphanumeric identifier for the term unique to its type. | No |  |
-| meta | query | Meta fields. | No |  |
-
-**Responses**
+<h1 id="-default">Default</h1>
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
-| 400 | Bad Request |
-| 404 | Not Found |
+## get__store-categories
 
-## /STORE-CATEGORIES/{ID}
-### ***GET*** 
+> Code samples
 
-### HTTP Request 
-`***GET*** /store-categories/{id}` 
+```php
+<?php
 
-**Parameters**
+require 'vendor/autoload.php';
 
-| Name | Located in | Description | Required | Type |
-| ---- | ---------- | ----------- | -------- | ---- |
-| id | path | Unique identifier for the term. | Yes |  |
-| context | query | Scope under which the request is made; determines fields present in response. | No |  |
+$client = new \GuzzleHttp\Client();
 
-**Responses**
+// Define array of request body.
+$request_body = array();
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
-| 400 | Bad Request |
-| 404 | Not Found |
+try {
+    $response = $client->request('GET','http://dokan-sample.test/store-categories', array(
+        'headers' => $headers,
+        'json' => $request_body,
+       )
+    );
+    print_r($response->getBody()->getContents());
+ }
+ catch (\GuzzleHttp\Exception\BadResponseException $e) {
+    // handle exception or api errors.
+    print_r($e->getMessage());
+ }
 
-### ***POST*** 
+ // ...
 
-### HTTP Request 
-`***POST*** /store-categories/{id}` 
+```
 
-**Parameters**
-
-| Name | Located in | Description | Required | Type |
-| ---- | ---------- | ----------- | -------- | ---- |
-| id | path | Unique identifier for the term. | Yes |  |
-| description | query | HTML description of the term. | No |  |
-| name | query | HTML title for the term. | No |  |
-| slug | query | An alphanumeric identifier for the term unique to its type. | No |  |
-| meta | query | Meta fields. | No |  |
-
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
-| 400 | Bad Request |
-| 404 | Not Found |
-
-### ***PUT*** 
-
-### HTTP Request 
-`***PUT*** /store-categories/{id}` 
+```python
+import requests
 
-**Parameters**
+r = requests.get('http://dokan-sample.test/store-categories')
 
-| Name | Located in | Description | Required | Type |
-| ---- | ---------- | ----------- | -------- | ---- |
-| id | path | Unique identifier for the term. | Yes |  |
-| description | query | HTML description of the term. | No |  |
-| name | query | HTML title for the term. | No |  |
-| slug | query | An alphanumeric identifier for the term unique to its type. | No |  |
-| meta | query | Meta fields. | No |  |
+print(r.json())
 
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
-| 400 | Bad Request |
-| 404 | Not Found |
+```
 
-### ***PATCH*** 
+```ruby
+require 'rest-client'
+require 'json'
 
-### HTTP Request 
-`***PATCH*** /store-categories/{id}` 
+result = RestClient.get 'http://dokan-sample.test/store-categories',
+  params: {
+  }
 
-**Parameters**
+p JSON.parse(result)
 
-| Name | Located in | Description | Required | Type |
-| ---- | ---------- | ----------- | -------- | ---- |
-| id | path | Unique identifier for the term. | Yes |  |
-| description | query | HTML description of the term. | No |  |
-| name | query | HTML title for the term. | No |  |
-| slug | query | An alphanumeric identifier for the term unique to its type. | No |  |
-| meta | query | Meta fields. | No |  |
+```
 
-**Responses**
-
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
-| 400 | Bad Request |
-| 404 | Not Found |
+`GET /store-categories`
 
-### ***DELETE*** 
+<h3 id="get__store-categories-parameters">Parameters</h3>
 
-### HTTP Request 
-`***DELETE*** /store-categories/{id}` 
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|context|query|string|false|Scope under which the request is made; determines fields present in response.|
+|page|query|integer|false|Current page of the collection.|
+|per_page|query|integer|false|Maximum number of items to be returned in result set.|
+|search|query|string|false|Limit results to those matching a string.|
+|exclude|query|array[integer]|false|Ensure result set excludes specific IDs.|
+|include|query|array[integer]|false|Limit result set to specific IDs.|
+|offset|query|integer|false|Offset the result set by a specific number of items.|
+|order|query|string|false|Order sort attribute ascending or descending.|
+|orderby|query|string|false|Sort collection by term attribute.|
+|hide_empty|query|boolean|false|Whether to hide terms not assigned to any posts.|
+|post|query|integer|false|Limit result set to terms assigned to a specific post.|
+|slug|query|array[string]|false|Limit result set to terms with one or more specific slugs.|
 
-**Parameters**
+#### Enumerated Values
 
-| Name | Located in | Description | Required | Type |
-| ---- | ---------- | ----------- | -------- | ---- |
-| id | path | Unique identifier for the term. | Yes |  |
-| force | query | Required to be true, as terms do not support trashing. | No |  |
+|Parameter|Value|
+|---|---|
+|context|view|
+|context|embed|
+|context|edit|
+|order|asc|
+|order|desc|
+|orderby|id|
+|orderby|include|
+|orderby|name|
+|orderby|slug|
+|orderby|include_slugs|
+|orderby|term_group|
+|orderby|description|
+|orderby|count|
+
+<h3 id="get__store-categories-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
+|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
+|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## post__store-categories
+
+> Code samples
+
+```php
+<?php
+
+require 'vendor/autoload.php';
+
+$headers = array(
+    'Content-Type' => 'application/json',
+);
+
+$client = new \GuzzleHttp\Client();
+
+// Define array of request body.
+$request_body = array();
+
+try {
+    $response = $client->request('POST','http://dokan-sample.test/store-categories', array(
+        'headers' => $headers,
+        'json' => $request_body,
+       )
+    );
+    print_r($response->getBody()->getContents());
+ }
+ catch (\GuzzleHttp\Exception\BadResponseException $e) {
+    // handle exception or api errors.
+    print_r($e->getMessage());
+ }
+
+ // ...
+
+```
+
+```python
+import requests
+headers = {
+  'Content-Type': 'application/json'
+}
+
+r = requests.post('http://dokan-sample.test/store-categories', params={
+  'name': 'string'
+}, headers = headers)
 
-**Responses**
+print(r.json())
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
-| 400 | Bad Request |
-| 404 | Not Found |
+```
 
-## /STORE-CATEGORIES/DEFAULT-CATEGORY
-### ***GET*** 
+```ruby
+require 'rest-client'
+require 'json'
 
-### HTTP Request 
-`***GET*** /store-categories/default-category` 
+headers = {
+  'Content-Type' => 'application/json'
+}
 
-**Parameters**
+result = RestClient.post 'http://dokan-sample.test/store-categories',
+  params: {
+  'name' => 'string'
+}, headers: headers
 
-| Name | Located in | Description | Required | Type |
-| ---- | ---------- | ----------- | -------- | ---- |
-| context | query | Scope under which the request is made; determines fields present in response. | No |  |
-| page | query | Current page of the collection. | No |  |
-| per_page | query | Maximum number of items to be returned in result set. | No |  |
-| search | query | Limit results to those matching a string. | No |  |
-| exclude | query | Ensure result set excludes specific IDs. | No |  |
-| include | query | Limit result set to specific IDs. | No |  |
-| offset | query | Offset the result set by a specific number of items. | No |  |
-| order | query | Order sort attribute ascending or descending. | No |  |
-| orderby | query | Sort collection by term attribute. | No |  |
-| hide_empty | query | Whether to hide terms not assigned to any posts. | No |  |
-| post | query | Limit result set to terms assigned to a specific post. | No |  |
-| slug | query | Limit result set to terms with one or more specific slugs. | No |  |
+p JSON.parse(result)
 
-**Responses**
+```
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
-| 400 | Bad Request |
-| 404 | Not Found |
+`POST /store-categories`
 
-### ***POST*** 
+> Body parameter
 
-### HTTP Request 
-`***POST*** /store-categories/default-category` 
+```json
+{
+  "description": "string",
+  "name": "string",
+  "slug": "string",
+  "meta": {}
+}
+```
 
-**Parameters**
+<h3 id="post__store-categories-parameters">Parameters</h3>
 
-| Name | Located in | Description | Required | Type |
-| ---- | ---------- | ----------- | -------- | ---- |
-| description | query | HTML description of the term. | No |  |
-| name | query | HTML title for the term. | No |  |
-| slug | query | An alphanumeric identifier for the term unique to its type. | No |  |
-| meta | query | Meta fields. | No |  |
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|description|query|string|false|HTML description of the term.|
+|name|query|string|true|HTML title for the term.|
+|slug|query|string|false|An alphanumeric identifier for the term unique to its type.|
+|meta|query|object|false|Meta fields.|
+|body|body|object|true|none|
+|» description|body|string|false|HTML description of the term.|
+|» name|body|string|false|HTML title for the term.|
+|» slug|body|string|false|An alphanumeric identifier for the term unique to its type.|
+|» meta|body|object|false|Meta fields.|
 
-**Responses**
+<h3 id="post__store-categories-responses">Responses</h3>
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
-| 400 | Bad Request |
-| 404 | Not Found |
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
+|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
+|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
 
-### ***PUT*** 
+<aside class="success">
+This operation does not require authentication
+</aside>
 
-### HTTP Request 
-`***PUT*** /store-categories/default-category` 
+## get__store-categories_{id}
 
-**Parameters**
+> Code samples
 
-| Name | Located in | Description | Required | Type |
-| ---- | ---------- | ----------- | -------- | ---- |
-| description | query | HTML description of the term. | No |  |
-| name | query | HTML title for the term. | No |  |
-| slug | query | An alphanumeric identifier for the term unique to its type. | No |  |
-| meta | query | Meta fields. | No |  |
+```php
+<?php
 
-**Responses**
+require 'vendor/autoload.php';
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
-| 400 | Bad Request |
-| 404 | Not Found |
+$client = new \GuzzleHttp\Client();
 
-### ***PATCH*** 
+// Define array of request body.
+$request_body = array();
 
-### HTTP Request 
-`***PATCH*** /store-categories/default-category` 
+try {
+    $response = $client->request('GET','http://dokan-sample.test/store-categories/{id}', array(
+        'headers' => $headers,
+        'json' => $request_body,
+       )
+    );
+    print_r($response->getBody()->getContents());
+ }
+ catch (\GuzzleHttp\Exception\BadResponseException $e) {
+    // handle exception or api errors.
+    print_r($e->getMessage());
+ }
 
-**Parameters**
+ // ...
 
-| Name | Located in | Description | Required | Type |
-| ---- | ---------- | ----------- | -------- | ---- |
-| description | query | HTML description of the term. | No |  |
-| name | query | HTML title for the term. | No |  |
-| slug | query | An alphanumeric identifier for the term unique to its type. | No |  |
-| meta | query | Meta fields. | No |  |
+```
 
-**Responses**
+```python
+import requests
 
-| Code | Description |
-| ---- | ----------- |
-| 200 | OK |
-| 400 | Bad Request |
-| 404 | Not Found |
+r = requests.get('http://dokan-sample.test/store-categories/{id}')
 
-<!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->
+print(r.json())
+
+```
+
+```ruby
+require 'rest-client'
+require 'json'
+
+result = RestClient.get 'http://dokan-sample.test/store-categories/{id}',
+  params: {
+  }
+
+p JSON.parse(result)
+
+```
+
+`GET /store-categories/{id}`
+
+<h3 id="get__store-categories_{id}-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|integer|true|Unique identifier for the term.|
+|context|query|string|false|Scope under which the request is made; determines fields present in response.|
+
+#### Enumerated Values
+
+|Parameter|Value|
+|---|---|
+|context|view|
+|context|embed|
+|context|edit|
+
+<h3 id="get__store-categories_{id}-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
+|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
+|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## post__store-categories_{id}
+
+> Code samples
+
+```php
+<?php
+
+require 'vendor/autoload.php';
+
+$headers = array(
+    'Content-Type' => 'application/json',
+);
+
+$client = new \GuzzleHttp\Client();
+
+// Define array of request body.
+$request_body = array();
+
+try {
+    $response = $client->request('POST','http://dokan-sample.test/store-categories/{id}', array(
+        'headers' => $headers,
+        'json' => $request_body,
+       )
+    );
+    print_r($response->getBody()->getContents());
+ }
+ catch (\GuzzleHttp\Exception\BadResponseException $e) {
+    // handle exception or api errors.
+    print_r($e->getMessage());
+ }
+
+ // ...
+
+```
+
+```python
+import requests
+headers = {
+  'Content-Type': 'application/json'
+}
+
+r = requests.post('http://dokan-sample.test/store-categories/{id}', headers = headers)
+
+print(r.json())
+
+```
+
+```ruby
+require 'rest-client'
+require 'json'
+
+headers = {
+  'Content-Type' => 'application/json'
+}
+
+result = RestClient.post 'http://dokan-sample.test/store-categories/{id}',
+  params: {
+  }, headers: headers
+
+p JSON.parse(result)
+
+```
+
+`POST /store-categories/{id}`
+
+> Body parameter
+
+```json
+{
+  "description": "string",
+  "name": "string",
+  "slug": "string",
+  "meta": {}
+}
+```
+
+<h3 id="post__store-categories_{id}-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|integer|true|Unique identifier for the term.|
+|description|query|string|false|HTML description of the term.|
+|name|query|string|false|HTML title for the term.|
+|slug|query|string|false|An alphanumeric identifier for the term unique to its type.|
+|meta|query|object|false|Meta fields.|
+|body|body|object|true|none|
+|» description|body|string|false|HTML description of the term.|
+|» name|body|string|false|HTML title for the term.|
+|» slug|body|string|false|An alphanumeric identifier for the term unique to its type.|
+|» meta|body|object|false|Meta fields.|
+
+<h3 id="post__store-categories_{id}-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
+|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
+|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## put__store-categories_{id}
+
+> Code samples
+
+```php
+<?php
+
+require 'vendor/autoload.php';
+
+$headers = array(
+    'Content-Type' => 'application/json',
+);
+
+$client = new \GuzzleHttp\Client();
+
+// Define array of request body.
+$request_body = array();
+
+try {
+    $response = $client->request('PUT','http://dokan-sample.test/store-categories/{id}', array(
+        'headers' => $headers,
+        'json' => $request_body,
+       )
+    );
+    print_r($response->getBody()->getContents());
+ }
+ catch (\GuzzleHttp\Exception\BadResponseException $e) {
+    // handle exception or api errors.
+    print_r($e->getMessage());
+ }
+
+ // ...
+
+```
+
+```python
+import requests
+headers = {
+  'Content-Type': 'application/json'
+}
+
+r = requests.put('http://dokan-sample.test/store-categories/{id}', headers = headers)
+
+print(r.json())
+
+```
+
+```ruby
+require 'rest-client'
+require 'json'
+
+headers = {
+  'Content-Type' => 'application/json'
+}
+
+result = RestClient.put 'http://dokan-sample.test/store-categories/{id}',
+  params: {
+  }, headers: headers
+
+p JSON.parse(result)
+
+```
+
+`PUT /store-categories/{id}`
+
+> Body parameter
+
+```json
+{
+  "description": "string",
+  "name": "string",
+  "slug": "string",
+  "meta": {}
+}
+```
+
+<h3 id="put__store-categories_{id}-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|integer|true|Unique identifier for the term.|
+|description|query|string|false|HTML description of the term.|
+|name|query|string|false|HTML title for the term.|
+|slug|query|string|false|An alphanumeric identifier for the term unique to its type.|
+|meta|query|object|false|Meta fields.|
+|body|body|object|true|none|
+|» description|body|string|false|HTML description of the term.|
+|» name|body|string|false|HTML title for the term.|
+|» slug|body|string|false|An alphanumeric identifier for the term unique to its type.|
+|» meta|body|object|false|Meta fields.|
+
+<h3 id="put__store-categories_{id}-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
+|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
+|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## patch__store-categories_{id}
+
+> Code samples
+
+```php
+<?php
+
+require 'vendor/autoload.php';
+
+$headers = array(
+    'Content-Type' => 'application/json',
+);
+
+$client = new \GuzzleHttp\Client();
+
+// Define array of request body.
+$request_body = array();
+
+try {
+    $response = $client->request('PATCH','http://dokan-sample.test/store-categories/{id}', array(
+        'headers' => $headers,
+        'json' => $request_body,
+       )
+    );
+    print_r($response->getBody()->getContents());
+ }
+ catch (\GuzzleHttp\Exception\BadResponseException $e) {
+    // handle exception or api errors.
+    print_r($e->getMessage());
+ }
+
+ // ...
+
+```
+
+```python
+import requests
+headers = {
+  'Content-Type': 'application/json'
+}
+
+r = requests.patch('http://dokan-sample.test/store-categories/{id}', headers = headers)
+
+print(r.json())
+
+```
+
+```ruby
+require 'rest-client'
+require 'json'
+
+headers = {
+  'Content-Type' => 'application/json'
+}
+
+result = RestClient.patch 'http://dokan-sample.test/store-categories/{id}',
+  params: {
+  }, headers: headers
+
+p JSON.parse(result)
+
+```
+
+`PATCH /store-categories/{id}`
+
+> Body parameter
+
+```json
+{
+  "description": "string",
+  "name": "string",
+  "slug": "string",
+  "meta": {}
+}
+```
+
+<h3 id="patch__store-categories_{id}-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|integer|true|Unique identifier for the term.|
+|description|query|string|false|HTML description of the term.|
+|name|query|string|false|HTML title for the term.|
+|slug|query|string|false|An alphanumeric identifier for the term unique to its type.|
+|meta|query|object|false|Meta fields.|
+|body|body|object|true|none|
+|» description|body|string|false|HTML description of the term.|
+|» name|body|string|false|HTML title for the term.|
+|» slug|body|string|false|An alphanumeric identifier for the term unique to its type.|
+|» meta|body|object|false|Meta fields.|
+
+<h3 id="patch__store-categories_{id}-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
+|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
+|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## delete__store-categories_{id}
+
+> Code samples
+
+```php
+<?php
+
+require 'vendor/autoload.php';
+
+$client = new \GuzzleHttp\Client();
+
+// Define array of request body.
+$request_body = array();
+
+try {
+    $response = $client->request('DELETE','http://dokan-sample.test/store-categories/{id}', array(
+        'headers' => $headers,
+        'json' => $request_body,
+       )
+    );
+    print_r($response->getBody()->getContents());
+ }
+ catch (\GuzzleHttp\Exception\BadResponseException $e) {
+    // handle exception or api errors.
+    print_r($e->getMessage());
+ }
+
+ // ...
+
+```
+
+```python
+import requests
+
+r = requests.delete('http://dokan-sample.test/store-categories/{id}')
+
+print(r.json())
+
+```
+
+```ruby
+require 'rest-client'
+require 'json'
+
+result = RestClient.delete 'http://dokan-sample.test/store-categories/{id}',
+  params: {
+  }
+
+p JSON.parse(result)
+
+```
+
+`DELETE /store-categories/{id}`
+
+<h3 id="delete__store-categories_{id}-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|integer|true|Unique identifier for the term.|
+|force|query|boolean|false|Required to be true, as terms do not support trashing.|
+
+<h3 id="delete__store-categories_{id}-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
+|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
+|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## get__store-categories_default-category
+
+> Code samples
+
+```php
+<?php
+
+require 'vendor/autoload.php';
+
+$client = new \GuzzleHttp\Client();
+
+// Define array of request body.
+$request_body = array();
+
+try {
+    $response = $client->request('GET','http://dokan-sample.test/store-categories/default-category', array(
+        'headers' => $headers,
+        'json' => $request_body,
+       )
+    );
+    print_r($response->getBody()->getContents());
+ }
+ catch (\GuzzleHttp\Exception\BadResponseException $e) {
+    // handle exception or api errors.
+    print_r($e->getMessage());
+ }
+
+ // ...
+
+```
+
+```python
+import requests
+
+r = requests.get('http://dokan-sample.test/store-categories/default-category')
+
+print(r.json())
+
+```
+
+```ruby
+require 'rest-client'
+require 'json'
+
+result = RestClient.get 'http://dokan-sample.test/store-categories/default-category',
+  params: {
+  }
+
+p JSON.parse(result)
+
+```
+
+`GET /store-categories/default-category`
+
+<h3 id="get__store-categories_default-category-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|context|query|string|false|Scope under which the request is made; determines fields present in response.|
+|page|query|integer|false|Current page of the collection.|
+|per_page|query|integer|false|Maximum number of items to be returned in result set.|
+|search|query|string|false|Limit results to those matching a string.|
+|exclude|query|array[integer]|false|Ensure result set excludes specific IDs.|
+|include|query|array[integer]|false|Limit result set to specific IDs.|
+|offset|query|integer|false|Offset the result set by a specific number of items.|
+|order|query|string|false|Order sort attribute ascending or descending.|
+|orderby|query|string|false|Sort collection by term attribute.|
+|hide_empty|query|boolean|false|Whether to hide terms not assigned to any posts.|
+|post|query|integer|false|Limit result set to terms assigned to a specific post.|
+|slug|query|array[string]|false|Limit result set to terms with one or more specific slugs.|
+
+#### Enumerated Values
+
+|Parameter|Value|
+|---|---|
+|context|view|
+|context|embed|
+|context|edit|
+|order|asc|
+|order|desc|
+|orderby|id|
+|orderby|include|
+|orderby|name|
+|orderby|slug|
+|orderby|include_slugs|
+|orderby|term_group|
+|orderby|description|
+|orderby|count|
+
+<h3 id="get__store-categories_default-category-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
+|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
+|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## post__store-categories_default-category
+
+> Code samples
+
+```php
+<?php
+
+require 'vendor/autoload.php';
+
+$headers = array(
+    'Content-Type' => 'application/json',
+);
+
+$client = new \GuzzleHttp\Client();
+
+// Define array of request body.
+$request_body = array();
+
+try {
+    $response = $client->request('POST','http://dokan-sample.test/store-categories/default-category', array(
+        'headers' => $headers,
+        'json' => $request_body,
+       )
+    );
+    print_r($response->getBody()->getContents());
+ }
+ catch (\GuzzleHttp\Exception\BadResponseException $e) {
+    // handle exception or api errors.
+    print_r($e->getMessage());
+ }
+
+ // ...
+
+```
+
+```python
+import requests
+headers = {
+  'Content-Type': 'application/json'
+}
+
+r = requests.post('http://dokan-sample.test/store-categories/default-category', headers = headers)
+
+print(r.json())
+
+```
+
+```ruby
+require 'rest-client'
+require 'json'
+
+headers = {
+  'Content-Type' => 'application/json'
+}
+
+result = RestClient.post 'http://dokan-sample.test/store-categories/default-category',
+  params: {
+  }, headers: headers
+
+p JSON.parse(result)
+
+```
+
+`POST /store-categories/default-category`
+
+> Body parameter
+
+```json
+{
+  "description": "string",
+  "name": "string",
+  "slug": "string",
+  "meta": {}
+}
+```
+
+<h3 id="post__store-categories_default-category-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|description|query|string|false|HTML description of the term.|
+|name|query|string|false|HTML title for the term.|
+|slug|query|string|false|An alphanumeric identifier for the term unique to its type.|
+|meta|query|object|false|Meta fields.|
+|body|body|object|true|none|
+|» description|body|string|false|HTML description of the term.|
+|» name|body|string|false|HTML title for the term.|
+|» slug|body|string|false|An alphanumeric identifier for the term unique to its type.|
+|» meta|body|object|false|Meta fields.|
+
+<h3 id="post__store-categories_default-category-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
+|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
+|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## put__store-categories_default-category
+
+> Code samples
+
+```php
+<?php
+
+require 'vendor/autoload.php';
+
+$headers = array(
+    'Content-Type' => 'application/json',
+);
+
+$client = new \GuzzleHttp\Client();
+
+// Define array of request body.
+$request_body = array();
+
+try {
+    $response = $client->request('PUT','http://dokan-sample.test/store-categories/default-category', array(
+        'headers' => $headers,
+        'json' => $request_body,
+       )
+    );
+    print_r($response->getBody()->getContents());
+ }
+ catch (\GuzzleHttp\Exception\BadResponseException $e) {
+    // handle exception or api errors.
+    print_r($e->getMessage());
+ }
+
+ // ...
+
+```
+
+```python
+import requests
+headers = {
+  'Content-Type': 'application/json'
+}
+
+r = requests.put('http://dokan-sample.test/store-categories/default-category', headers = headers)
+
+print(r.json())
+
+```
+
+```ruby
+require 'rest-client'
+require 'json'
+
+headers = {
+  'Content-Type' => 'application/json'
+}
+
+result = RestClient.put 'http://dokan-sample.test/store-categories/default-category',
+  params: {
+  }, headers: headers
+
+p JSON.parse(result)
+
+```
+
+`PUT /store-categories/default-category`
+
+> Body parameter
+
+```json
+{
+  "description": "string",
+  "name": "string",
+  "slug": "string",
+  "meta": {}
+}
+```
+
+<h3 id="put__store-categories_default-category-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|description|query|string|false|HTML description of the term.|
+|name|query|string|false|HTML title for the term.|
+|slug|query|string|false|An alphanumeric identifier for the term unique to its type.|
+|meta|query|object|false|Meta fields.|
+|body|body|object|true|none|
+|» description|body|string|false|HTML description of the term.|
+|» name|body|string|false|HTML title for the term.|
+|» slug|body|string|false|An alphanumeric identifier for the term unique to its type.|
+|» meta|body|object|false|Meta fields.|
+
+<h3 id="put__store-categories_default-category-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
+|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
+|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
+## patch__store-categories_default-category
+
+> Code samples
+
+```php
+<?php
+
+require 'vendor/autoload.php';
+
+$headers = array(
+    'Content-Type' => 'application/json',
+);
+
+$client = new \GuzzleHttp\Client();
+
+// Define array of request body.
+$request_body = array();
+
+try {
+    $response = $client->request('PATCH','http://dokan-sample.test/store-categories/default-category', array(
+        'headers' => $headers,
+        'json' => $request_body,
+       )
+    );
+    print_r($response->getBody()->getContents());
+ }
+ catch (\GuzzleHttp\Exception\BadResponseException $e) {
+    // handle exception or api errors.
+    print_r($e->getMessage());
+ }
+
+ // ...
+
+```
+
+```python
+import requests
+headers = {
+  'Content-Type': 'application/json'
+}
+
+r = requests.patch('http://dokan-sample.test/store-categories/default-category', headers = headers)
+
+print(r.json())
+
+```
+
+```ruby
+require 'rest-client'
+require 'json'
+
+headers = {
+  'Content-Type' => 'application/json'
+}
+
+result = RestClient.patch 'http://dokan-sample.test/store-categories/default-category',
+  params: {
+  }, headers: headers
+
+p JSON.parse(result)
+
+```
+
+`PATCH /store-categories/default-category`
+
+> Body parameter
+
+```json
+{
+  "description": "string",
+  "name": "string",
+  "slug": "string",
+  "meta": {}
+}
+```
+
+<h3 id="patch__store-categories_default-category-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|description|query|string|false|HTML description of the term.|
+|name|query|string|false|HTML title for the term.|
+|slug|query|string|false|An alphanumeric identifier for the term unique to its type.|
+|meta|query|object|false|Meta fields.|
+|body|body|object|true|none|
+|» description|body|string|false|HTML description of the term.|
+|» name|body|string|false|HTML title for the term.|
+|» slug|body|string|false|An alphanumeric identifier for the term unique to its type.|
+|» meta|body|object|false|Meta fields.|
+
+<h3 id="patch__store-categories_default-category-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
+|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
+|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
+
+<aside class="success">
+This operation does not require authentication
+</aside>
+
