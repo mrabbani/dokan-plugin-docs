@@ -1,1348 +1,288 @@
----
-title: null
-language_tabs:
-  - curl: CURL
-  - php: PHP
-  - python: Python
-  - ruby: Ruby
-toc_footers: []
-includes: []
-search: true
-highlight_theme: darkula
-headingLevel: 2
+# WITHDRAW
+## /WITHDRAW
+### ***GET*** 
 
----
+### HTTP Request 
+`***GET*** /withdraw` 
 
-<!-- Generator: Widdershins v4.0.1 -->
+**Parameters**
 
-<h1 id="">undefined vv1.0.0</h1>
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| context | query | Scope under which the request is made; determines fields present in response. | No |  |
+| page | query | Current page of the collection. | No |  |
+| per_page | query | Maximum number of items to be returned in result set. | No |  |
+| search | query | Limit results to those matching a string. | No |  |
+| ids | query | IDs of withdraws | No |  |
+| is_export | query | Is withdraws exportable | No |  |
 
-> Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.
+**Responses**
 
-Base URLs:
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-* <a href="http://dokan-sample.test">http://dokan-sample.test</a>
+### ***POST*** 
 
-<h1 id="-default">Default</h1>
+### HTTP Request 
+`***POST*** /withdraw` 
 
-## get__withdraw
+**Parameters**
 
-> Code samples
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| user_id | query | Requested User ID | No |  |
+| amount | query | The amount of discount. Should always be numeric, even if setting a percentage. | Yes |  |
+| status | query | Withdraw status | No |  |
+| method | query | Withdraw Method | Yes |  |
+| note | query | Withdraw Notes | No |  |
 
-```php
-<?php
+**Responses**
 
-require 'vendor/autoload.php';
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-$client = new \GuzzleHttp\Client();
+## /WITHDRAW/BALANCE
+### ***GET*** 
 
-// Define array of request body.
-$request_body = array();
+### HTTP Request 
+`***GET*** /withdraw/balance` 
 
-try {
-    $response = $client->request('GET','http://dokan-sample.test/withdraw', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
+**Responses**
 
- // ...
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-```
+## /WITHDRAW/{ID}
+### ***GET*** 
 
-```python
-import requests
+### HTTP Request 
+`***GET*** /withdraw/{id}` 
 
-r = requests.get('http://dokan-sample.test/withdraw')
+**Parameters**
 
-print(r.json())
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| id | path | Unique identifier for the object. | Yes |  |
 
-```
+**Responses**
 
-```ruby
-require 'rest-client'
-require 'json'
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-result = RestClient.get 'http://dokan-sample.test/withdraw',
-  params: {
-  }
+### ***POST*** 
 
-p JSON.parse(result)
+### HTTP Request 
+`***POST*** /withdraw/{id}` 
 
-```
+**Parameters**
 
-`GET /withdraw`
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| id | path | Unique identifier for the object. | Yes |  |
+| user_id | query | Requested User ID | No |  |
+| amount | query | The amount of discount. Should always be numeric, even if setting a percentage. | No |  |
+| status | query | Withdraw status | No |  |
+| method | query | Withdraw Method | No |  |
+| note | query | Withdraw Notes | No |  |
 
-<h3 id="get__withdraw-parameters">Parameters</h3>
+**Responses**
 
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|context|query|string|false|Scope under which the request is made; determines fields present in response.|
-|page|query|integer|false|Current page of the collection.|
-|per_page|query|integer|false|Maximum number of items to be returned in result set.|
-|search|query|string|false|Limit results to those matching a string.|
-|ids|query|array[integer]|false|IDs of withdraws|
-|is_export|query|boolean|false|Is withdraws exportable|
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-#### Enumerated Values
+### ***PUT*** 
 
-|Parameter|Value|
-|---|---|
-|context|view|
-|context|edit|
+### HTTP Request 
+`***PUT*** /withdraw/{id}` 
 
-<h3 id="get__withdraw-responses">Responses</h3>
+**Parameters**
 
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| id | path | Unique identifier for the object. | Yes |  |
+| user_id | query | Requested User ID | No |  |
+| amount | query | The amount of discount. Should always be numeric, even if setting a percentage. | No |  |
+| status | query | Withdraw status | No |  |
+| method | query | Withdraw Method | No |  |
+| note | query | Withdraw Notes | No |  |
 
-## post__withdraw
+**Responses**
 
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('POST','http://dokan-sample.test/withdraw', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-r = requests.post('http://dokan-sample.test/withdraw', params={
-  'amount': 'string',  'method': 'paypal'
-}, headers = headers)
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json'
-}
-
-result = RestClient.post 'http://dokan-sample.test/withdraw',
-  params: {
-  'amount' => 'string',
-'method' => 'string'
-}, headers: headers
-
-p JSON.parse(result)
+### ***PATCH*** 
 
-```
+### HTTP Request 
+`***PATCH*** /withdraw/{id}` 
 
-`POST /withdraw`
+**Parameters**
 
-> Body parameter
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| id | path | Unique identifier for the object. | Yes |  |
+| user_id | query | Requested User ID | No |  |
+| amount | query | The amount of discount. Should always be numeric, even if setting a percentage. | No |  |
+| status | query | Withdraw status | No |  |
+| method | query | Withdraw Method | No |  |
+| note | query | Withdraw Notes | No |  |
 
-```json
-{
-  "user_id": 0,
-  "amount": "string",
-  "status": "pending",
-  "method": "paypal",
-  "note": "string"
-}
-```
+**Responses**
 
-<h3 id="post__withdraw-parameters">Parameters</h3>
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|user_id|query|integer|false|Requested User ID|
-|amount|query|string|true|The amount of discount. Should always be numeric, even if setting a percentage.|
-|status|query|string|false|Withdraw status|
-|method|query|string|true|Withdraw Method|
-|note|query|string|false|Withdraw Notes|
-|body|body|object|true|none|
-|» user_id|body|integer|false|Requested User ID|
-|» amount|body|string|false|The amount of discount. Should always be numeric, even if setting a percentage.|
-|» status|body|string|false|Withdraw status|
-|» method|body|string|false|Withdraw Method|
-|» note|body|string|false|Withdraw Notes|
+### ***DELETE*** 
 
-#### Enumerated Values
+### HTTP Request 
+`***DELETE*** /withdraw/{id}` 
 
-|Parameter|Value|
-|---|---|
-|status|pending|
-|status|approved|
-|status|cancelled|
-|method|paypal|
-|method|bank|
-|method|dokan-stripe-connect|
-|» status|pending|
-|» status|approved|
-|» status|cancelled|
-|» method|paypal|
-|» method|bank|
-|» method|dokan-stripe-connect|
+**Parameters**
 
-<h3 id="post__withdraw-responses">Responses</h3>
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| id | path | Unique identifier for the object. | Yes |  |
 
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
+**Responses**
 
-<aside class="success">
-This operation does not require authentication
-</aside>
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-## get__withdraw_balance
+## /WITHDRAW/PAYMENT_METHODS
+### ***GET*** 
 
-> Code samples
+### HTTP Request 
+`***GET*** /withdraw/payment_methods` 
 
-```php
-<?php
+**Responses**
 
-require 'vendor/autoload.php';
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-$client = new \GuzzleHttp\Client();
+## /WITHDRAW/BATCH
+### ***POST*** 
 
-// Define array of request body.
-$request_body = array();
+### HTTP Request 
+`***POST*** /withdraw/batch` 
 
-try {
-    $response = $client->request('GET','http://dokan-sample.test/withdraw/balance', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
+**Parameters**
 
- // ...
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| approved | query | List of withdraw IDs to be approved | No |  |
+| cancelled | query | List of withdraw IDs to be cancelled | No |  |
+| delete | query | List of withdraw IDs to be deleted | No |  |
 
-```
+**Responses**
 
-```python
-import requests
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-r = requests.get('http://dokan-sample.test/withdraw/balance')
+### ***PUT*** 
 
-print(r.json())
+### HTTP Request 
+`***PUT*** /withdraw/batch` 
 
-```
+**Parameters**
 
-```ruby
-require 'rest-client'
-require 'json'
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| approved | query | List of withdraw IDs to be approved | No |  |
+| cancelled | query | List of withdraw IDs to be cancelled | No |  |
+| delete | query | List of withdraw IDs to be deleted | No |  |
 
-result = RestClient.get 'http://dokan-sample.test/withdraw/balance',
-  params: {
-  }
+**Responses**
 
-p JSON.parse(result)
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-```
+### ***PATCH*** 
 
-`GET /withdraw/balance`
+### HTTP Request 
+`***PATCH*** /withdraw/batch` 
 
-<h3 id="get__withdraw_balance-responses">Responses</h3>
+**Parameters**
 
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| approved | query | List of withdraw IDs to be approved | No |  |
+| cancelled | query | List of withdraw IDs to be cancelled | No |  |
+| delete | query | List of withdraw IDs to be deleted | No |  |
 
-<aside class="success">
-This operation does not require authentication
-</aside>
+**Responses**
 
-## get__withdraw_{id}
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-> Code samples
+## /WITHDRAW/CHARGES
+### ***GET*** 
 
-```php
-<?php
+### HTTP Request 
+`***GET*** /withdraw/charges` 
 
-require 'vendor/autoload.php';
+**Responses**
 
-$client = new \GuzzleHttp\Client();
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-// Define array of request body.
-$request_body = array();
+## /WITHDRAW/CHARGE
+### ***GET*** 
 
-try {
-    $response = $client->request('GET','http://dokan-sample.test/withdraw/{id}', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
+### HTTP Request 
+`***GET*** /withdraw/charge` 
 
- // ...
+**Parameters**
 
-```
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| method | query | Withdraw method key | Yes |  |
+| amount | query | Withdraw amount | Yes |  |
 
-```python
-import requests
+**Responses**
 
-r = requests.get('http://dokan-sample.test/withdraw/{id}')
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'http://dokan-sample.test/withdraw/{id}',
-  params: {
-  }
-
-p JSON.parse(result)
-
-```
-
-`GET /withdraw/{id}`
-
-<h3 id="get__withdraw_{id}-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|id|path|integer|true|Unique identifier for the object.|
-
-<h3 id="get__withdraw_{id}-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## post__withdraw_{id}
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('POST','http://dokan-sample.test/withdraw/{id}', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
-
-r = requests.post('http://dokan-sample.test/withdraw/{id}', headers = headers)
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json'
-}
-
-result = RestClient.post 'http://dokan-sample.test/withdraw/{id}',
-  params: {
-  }, headers: headers
-
-p JSON.parse(result)
-
-```
-
-`POST /withdraw/{id}`
-
-> Body parameter
-
-```json
-{
-  "user_id": 0,
-  "amount": "string",
-  "status": "pending",
-  "method": "paypal",
-  "note": "string"
-}
-```
-
-<h3 id="post__withdraw_{id}-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|id|path|integer|true|Unique identifier for the object.|
-|user_id|query|integer|false|Requested User ID|
-|amount|query|string|false|The amount of discount. Should always be numeric, even if setting a percentage.|
-|status|query|string|false|Withdraw status|
-|method|query|string|false|Withdraw Method|
-|note|query|string|false|Withdraw Notes|
-|body|body|object|true|none|
-|» user_id|body|integer|false|Requested User ID|
-|» amount|body|string|false|The amount of discount. Should always be numeric, even if setting a percentage.|
-|» status|body|string|false|Withdraw status|
-|» method|body|string|false|Withdraw Method|
-|» note|body|string|false|Withdraw Notes|
-
-#### Enumerated Values
-
-|Parameter|Value|
-|---|---|
-|status|pending|
-|status|approved|
-|status|cancelled|
-|method|paypal|
-|method|bank|
-|method|dokan-stripe-connect|
-|» status|pending|
-|» status|approved|
-|» status|cancelled|
-|» method|paypal|
-|» method|bank|
-|» method|dokan-stripe-connect|
-
-<h3 id="post__withdraw_{id}-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## put__withdraw_{id}
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('PUT','http://dokan-sample.test/withdraw/{id}', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
-
-r = requests.put('http://dokan-sample.test/withdraw/{id}', headers = headers)
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json'
-}
-
-result = RestClient.put 'http://dokan-sample.test/withdraw/{id}',
-  params: {
-  }, headers: headers
-
-p JSON.parse(result)
-
-```
-
-`PUT /withdraw/{id}`
-
-> Body parameter
-
-```json
-{
-  "user_id": 0,
-  "amount": "string",
-  "status": "pending",
-  "method": "paypal",
-  "note": "string"
-}
-```
-
-<h3 id="put__withdraw_{id}-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|id|path|integer|true|Unique identifier for the object.|
-|user_id|query|integer|false|Requested User ID|
-|amount|query|string|false|The amount of discount. Should always be numeric, even if setting a percentage.|
-|status|query|string|false|Withdraw status|
-|method|query|string|false|Withdraw Method|
-|note|query|string|false|Withdraw Notes|
-|body|body|object|true|none|
-|» user_id|body|integer|false|Requested User ID|
-|» amount|body|string|false|The amount of discount. Should always be numeric, even if setting a percentage.|
-|» status|body|string|false|Withdraw status|
-|» method|body|string|false|Withdraw Method|
-|» note|body|string|false|Withdraw Notes|
-
-#### Enumerated Values
-
-|Parameter|Value|
-|---|---|
-|status|pending|
-|status|approved|
-|status|cancelled|
-|method|paypal|
-|method|bank|
-|method|dokan-stripe-connect|
-|» status|pending|
-|» status|approved|
-|» status|cancelled|
-|» method|paypal|
-|» method|bank|
-|» method|dokan-stripe-connect|
-
-<h3 id="put__withdraw_{id}-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## patch__withdraw_{id}
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('PATCH','http://dokan-sample.test/withdraw/{id}', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
-
-r = requests.patch('http://dokan-sample.test/withdraw/{id}', headers = headers)
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json'
-}
-
-result = RestClient.patch 'http://dokan-sample.test/withdraw/{id}',
-  params: {
-  }, headers: headers
-
-p JSON.parse(result)
-
-```
-
-`PATCH /withdraw/{id}`
-
-> Body parameter
-
-```json
-{
-  "user_id": 0,
-  "amount": "string",
-  "status": "pending",
-  "method": "paypal",
-  "note": "string"
-}
-```
-
-<h3 id="patch__withdraw_{id}-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|id|path|integer|true|Unique identifier for the object.|
-|user_id|query|integer|false|Requested User ID|
-|amount|query|string|false|The amount of discount. Should always be numeric, even if setting a percentage.|
-|status|query|string|false|Withdraw status|
-|method|query|string|false|Withdraw Method|
-|note|query|string|false|Withdraw Notes|
-|body|body|object|true|none|
-|» user_id|body|integer|false|Requested User ID|
-|» amount|body|string|false|The amount of discount. Should always be numeric, even if setting a percentage.|
-|» status|body|string|false|Withdraw status|
-|» method|body|string|false|Withdraw Method|
-|» note|body|string|false|Withdraw Notes|
-
-#### Enumerated Values
-
-|Parameter|Value|
-|---|---|
-|status|pending|
-|status|approved|
-|status|cancelled|
-|method|paypal|
-|method|bank|
-|method|dokan-stripe-connect|
-|» status|pending|
-|» status|approved|
-|» status|cancelled|
-|» method|paypal|
-|» method|bank|
-|» method|dokan-stripe-connect|
-
-<h3 id="patch__withdraw_{id}-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## delete__withdraw_{id}
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('DELETE','http://dokan-sample.test/withdraw/{id}', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-
-r = requests.delete('http://dokan-sample.test/withdraw/{id}')
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'http://dokan-sample.test/withdraw/{id}',
-  params: {
-  }
-
-p JSON.parse(result)
-
-```
-
-`DELETE /withdraw/{id}`
-
-<h3 id="delete__withdraw_{id}-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|id|path|integer|true|Unique identifier for the object.|
-
-<h3 id="delete__withdraw_{id}-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## get__withdraw_payment_methods
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('GET','http://dokan-sample.test/withdraw/payment_methods', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-
-r = requests.get('http://dokan-sample.test/withdraw/payment_methods')
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'http://dokan-sample.test/withdraw/payment_methods',
-  params: {
-  }
-
-p JSON.parse(result)
-
-```
-
-`GET /withdraw/payment_methods`
-
-<h3 id="get__withdraw_payment_methods-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## post__withdraw_batch
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('POST','http://dokan-sample.test/withdraw/batch', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
-
-r = requests.post('http://dokan-sample.test/withdraw/batch', headers = headers)
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json'
-}
-
-result = RestClient.post 'http://dokan-sample.test/withdraw/batch',
-  params: {
-  }, headers: headers
-
-p JSON.parse(result)
-
-```
-
-`POST /withdraw/batch`
-
-> Body parameter
-
-```json
-{
-  "approved": [
-    0
-  ],
-  "cancelled": [
-    0
-  ],
-  "delete": [
-    0
-  ]
-}
-```
-
-<h3 id="post__withdraw_batch-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|approved|query|array[integer]|false|List of withdraw IDs to be approved|
-|cancelled|query|array[integer]|false|List of withdraw IDs to be cancelled|
-|delete|query|array[integer]|false|List of withdraw IDs to be deleted|
-|body|body|object|true|none|
-|» approved|body|[integer]|false|List of withdraw IDs to be approved|
-|» cancelled|body|[integer]|false|List of withdraw IDs to be cancelled|
-|» delete|body|[integer]|false|List of withdraw IDs to be deleted|
-
-<h3 id="post__withdraw_batch-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## put__withdraw_batch
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('PUT','http://dokan-sample.test/withdraw/batch', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
-
-r = requests.put('http://dokan-sample.test/withdraw/batch', headers = headers)
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json'
-}
-
-result = RestClient.put 'http://dokan-sample.test/withdraw/batch',
-  params: {
-  }, headers: headers
-
-p JSON.parse(result)
-
-```
-
-`PUT /withdraw/batch`
-
-> Body parameter
-
-```json
-{
-  "approved": [
-    0
-  ],
-  "cancelled": [
-    0
-  ],
-  "delete": [
-    0
-  ]
-}
-```
-
-<h3 id="put__withdraw_batch-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|approved|query|array[integer]|false|List of withdraw IDs to be approved|
-|cancelled|query|array[integer]|false|List of withdraw IDs to be cancelled|
-|delete|query|array[integer]|false|List of withdraw IDs to be deleted|
-|body|body|object|true|none|
-|» approved|body|[integer]|false|List of withdraw IDs to be approved|
-|» cancelled|body|[integer]|false|List of withdraw IDs to be cancelled|
-|» delete|body|[integer]|false|List of withdraw IDs to be deleted|
-
-<h3 id="put__withdraw_batch-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## patch__withdraw_batch
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('PATCH','http://dokan-sample.test/withdraw/batch', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
-
-r = requests.patch('http://dokan-sample.test/withdraw/batch', headers = headers)
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json'
-}
-
-result = RestClient.patch 'http://dokan-sample.test/withdraw/batch',
-  params: {
-  }, headers: headers
-
-p JSON.parse(result)
-
-```
-
-`PATCH /withdraw/batch`
-
-> Body parameter
-
-```json
-{
-  "approved": [
-    0
-  ],
-  "cancelled": [
-    0
-  ],
-  "delete": [
-    0
-  ]
-}
-```
-
-<h3 id="patch__withdraw_batch-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|approved|query|array[integer]|false|List of withdraw IDs to be approved|
-|cancelled|query|array[integer]|false|List of withdraw IDs to be cancelled|
-|delete|query|array[integer]|false|List of withdraw IDs to be deleted|
-|body|body|object|true|none|
-|» approved|body|[integer]|false|List of withdraw IDs to be approved|
-|» cancelled|body|[integer]|false|List of withdraw IDs to be cancelled|
-|» delete|body|[integer]|false|List of withdraw IDs to be deleted|
-
-<h3 id="patch__withdraw_batch-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## get__withdraw_charges
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('GET','http://dokan-sample.test/withdraw/charges', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-
-r = requests.get('http://dokan-sample.test/withdraw/charges')
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'http://dokan-sample.test/withdraw/charges',
-  params: {
-  }
-
-p JSON.parse(result)
-
-```
-
-`GET /withdraw/charges`
-
-<h3 id="get__withdraw_charges-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## get__withdraw_charge
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('GET','http://dokan-sample.test/withdraw/charge', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-
-r = requests.get('http://dokan-sample.test/withdraw/charge', params={
-  'method': 'paypal',  'amount': '0'
-})
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'http://dokan-sample.test/withdraw/charge',
-  params: {
-  'method' => 'string',
-'amount' => 'number'
-}
-
-p JSON.parse(result)
-
-```
-
-`GET /withdraw/charge`
-
-<h3 id="get__withdraw_charge-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|method|query|string|true|Withdraw method key|
-|amount|query|number|true|Withdraw amount|
-
-#### Enumerated Values
-
-|Parameter|Value|
-|---|---|
-|method|paypal|
-|method|bank|
-|method|dokan-stripe-connect|
-
-<h3 id="get__withdraw_charge-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
+<!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->

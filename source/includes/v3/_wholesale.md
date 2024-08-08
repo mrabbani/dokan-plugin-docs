@@ -1,678 +1,146 @@
----
-title: null
-language_tabs:
-  - curl: CURL
-  - php: PHP
-  - python: Python
-  - ruby: Ruby
-toc_footers: []
-includes: []
-search: true
-highlight_theme: darkula
-headingLevel: 2
+# WHOLESALE/REGISTER
+## /WHOLESALE/REGISTER
+### ***POST*** 
 
----
+### HTTP Request 
+`***POST*** /wholesale/register` 
 
-<!-- Generator: Widdershins v4.0.1 -->
+**Parameters**
 
-<h1 id="">undefined vv1.0.0</h1>
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| id | query | User ID. | Yes |  |
 
-> Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.
+**Responses**
 
-Base URLs:
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-* <a href="http://dokan-sample.test">http://dokan-sample.test</a>
+## /WHOLESALE/CUSTOMERS
+### ***GET*** 
 
-<h1 id="-default">Default</h1>
+### HTTP Request 
+`***GET*** /wholesale/customers` 
 
-## post__wholesale_register
+**Parameters**
 
-> Code samples
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| context | query | Scope under which the request is made; determines fields present in response. | No |  |
+| page | query | Current page of the collection. | No |  |
+| per_page | query | Maximum number of items to be returned in result set. | No |  |
+| search | query | Limit results to those matching a string. | No |  |
 
-```php
-<?php
+**Responses**
 
-require 'vendor/autoload.php';
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-$headers = array(
-    'Content-Type' => 'application/json',
-);
+## /WHOLESALE/CUSTOMER/{ID}
+### ***POST*** 
 
-$client = new \GuzzleHttp\Client();
+### HTTP Request 
+`***POST*** /wholesale/customer/{id}` 
 
-// Define array of request body.
-$request_body = array();
+**Parameters**
 
-try {
-    $response = $client->request('POST','http://dokan-sample.test/wholesale/register', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| id | path | Unique identifier for the object. | Yes |  |
+| status | query | Status for wholesale customer | No |  |
 
- // ...
+**Responses**
 
-```
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
+### ***PUT*** 
 
-r = requests.post('http://dokan-sample.test/wholesale/register', params={
-  'id': 'string'
-}, headers = headers)
+### HTTP Request 
+`***PUT*** /wholesale/customer/{id}` 
 
-print(r.json())
+**Parameters**
 
-```
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| id | path | Unique identifier for the object. | Yes |  |
+| status | query | Status for wholesale customer | No |  |
 
-```ruby
-require 'rest-client'
-require 'json'
+**Responses**
 
-headers = {
-  'Content-Type' => 'application/json'
-}
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-result = RestClient.post 'http://dokan-sample.test/wholesale/register',
-  params: {
-  'id' => 'string'
-}, headers: headers
+### ***PATCH*** 
 
-p JSON.parse(result)
+### HTTP Request 
+`***PATCH*** /wholesale/customer/{id}` 
 
-```
+**Parameters**
 
-`POST /wholesale/register`
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| id | path | Unique identifier for the object. | Yes |  |
+| status | query | Status for wholesale customer | No |  |
 
-> Body parameter
+**Responses**
 
-```json
-{
-  "id": "string"
-}
-```
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-<h3 id="post__wholesale_register-parameters">Parameters</h3>
+## /WHOLESALE/CUSTOMERS/BATCH
+### ***POST*** 
 
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|id|query|string|true|User ID.|
-|body|body|object|true|none|
-|» id|body|string|false|User ID.|
+### HTTP Request 
+`***POST*** /wholesale/customers/batch` 
 
-<h3 id="post__wholesale_register-responses">Responses</h3>
+**Responses**
 
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-<aside class="success">
-This operation does not require authentication
-</aside>
+### ***PUT*** 
 
-## get__wholesale_customers
+### HTTP Request 
+`***PUT*** /wholesale/customers/batch` 
 
-> Code samples
+**Responses**
 
-```php
-<?php
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-require 'vendor/autoload.php';
+### ***PATCH*** 
 
-$client = new \GuzzleHttp\Client();
+### HTTP Request 
+`***PATCH*** /wholesale/customers/batch` 
 
-// Define array of request body.
-$request_body = array();
+**Responses**
 
-try {
-    $response = $client->request('GET','http://dokan-sample.test/wholesale/customers', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
- // ...
-
-```
-
-```python
-import requests
-
-r = requests.get('http://dokan-sample.test/wholesale/customers')
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'http://dokan-sample.test/wholesale/customers',
-  params: {
-  }
-
-p JSON.parse(result)
-
-```
-
-`GET /wholesale/customers`
-
-<h3 id="get__wholesale_customers-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|context|query|string|false|Scope under which the request is made; determines fields present in response.|
-|page|query|integer|false|Current page of the collection.|
-|per_page|query|integer|false|Maximum number of items to be returned in result set.|
-|search|query|string|false|Limit results to those matching a string.|
-
-<h3 id="get__wholesale_customers-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## post__wholesale_customer_{id}
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('POST','http://dokan-sample.test/wholesale/customer/{id}', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
-
-r = requests.post('http://dokan-sample.test/wholesale/customer/{id}', headers = headers)
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json'
-}
-
-result = RestClient.post 'http://dokan-sample.test/wholesale/customer/{id}',
-  params: {
-  }, headers: headers
-
-p JSON.parse(result)
-
-```
-
-`POST /wholesale/customer/{id}`
-
-> Body parameter
-
-```json
-{
-  "status": "string"
-}
-```
-
-<h3 id="post__wholesale_customer_{id}-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|id|path|integer|true|Unique identifier for the object.|
-|status|query|string|false|Status for wholesale customer|
-|body|body|object|true|none|
-|» status|body|string|false|Status for wholesale customer|
-
-<h3 id="post__wholesale_customer_{id}-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## put__wholesale_customer_{id}
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('PUT','http://dokan-sample.test/wholesale/customer/{id}', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
-
-r = requests.put('http://dokan-sample.test/wholesale/customer/{id}', headers = headers)
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json'
-}
-
-result = RestClient.put 'http://dokan-sample.test/wholesale/customer/{id}',
-  params: {
-  }, headers: headers
-
-p JSON.parse(result)
-
-```
-
-`PUT /wholesale/customer/{id}`
-
-> Body parameter
-
-```json
-{
-  "status": "string"
-}
-```
-
-<h3 id="put__wholesale_customer_{id}-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|id|path|integer|true|Unique identifier for the object.|
-|status|query|string|false|Status for wholesale customer|
-|body|body|object|true|none|
-|» status|body|string|false|Status for wholesale customer|
-
-<h3 id="put__wholesale_customer_{id}-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## patch__wholesale_customer_{id}
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('PATCH','http://dokan-sample.test/wholesale/customer/{id}', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
-
-r = requests.patch('http://dokan-sample.test/wholesale/customer/{id}', headers = headers)
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json'
-}
-
-result = RestClient.patch 'http://dokan-sample.test/wholesale/customer/{id}',
-  params: {
-  }, headers: headers
-
-p JSON.parse(result)
-
-```
-
-`PATCH /wholesale/customer/{id}`
-
-> Body parameter
-
-```json
-{
-  "status": "string"
-}
-```
-
-<h3 id="patch__wholesale_customer_{id}-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|id|path|integer|true|Unique identifier for the object.|
-|status|query|string|false|Status for wholesale customer|
-|body|body|object|true|none|
-|» status|body|string|false|Status for wholesale customer|
-
-<h3 id="patch__wholesale_customer_{id}-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## post__wholesale_customers_batch
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('POST','http://dokan-sample.test/wholesale/customers/batch', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-
-r = requests.post('http://dokan-sample.test/wholesale/customers/batch')
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.post 'http://dokan-sample.test/wholesale/customers/batch',
-  params: {
-  }
-
-p JSON.parse(result)
-
-```
-
-`POST /wholesale/customers/batch`
-
-<h3 id="post__wholesale_customers_batch-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## put__wholesale_customers_batch
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('PUT','http://dokan-sample.test/wholesale/customers/batch', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-
-r = requests.put('http://dokan-sample.test/wholesale/customers/batch')
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.put 'http://dokan-sample.test/wholesale/customers/batch',
-  params: {
-  }
-
-p JSON.parse(result)
-
-```
-
-`PUT /wholesale/customers/batch`
-
-<h3 id="put__wholesale_customers_batch-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## patch__wholesale_customers_batch
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('PATCH','http://dokan-sample.test/wholesale/customers/batch', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-
-r = requests.patch('http://dokan-sample.test/wholesale/customers/batch')
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.patch 'http://dokan-sample.test/wholesale/customers/batch',
-  params: {
-  }
-
-p JSON.parse(result)
-
-```
-
-`PATCH /wholesale/customers/batch`
-
-<h3 id="patch__wholesale_customers_batch-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
+<!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->

@@ -1,713 +1,157 @@
----
-title: null
-language_tabs:
-  - curl: CURL
-  - php: PHP
-  - python: Python
-  - ruby: Ruby
-toc_footers: []
-includes: []
-search: true
-highlight_theme: darkula
-headingLevel: 2
+# VERIFICATION-METHODS
+## /VERIFICATION-METHODS
+### ***GET*** 
 
----
+### HTTP Request 
+`***GET*** /verification-methods` 
 
-<!-- Generator: Widdershins v4.0.1 -->
+**Parameters**
 
-<h1 id="">undefined vv1.0.0</h1>
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| context | query | Scope under which the request is made; determines fields present in response. | No |  |
+| page | query | Current page of the collection. | No |  |
+| per_page | query | Maximum number of items to be returned in result set. | No |  |
+| required | query | The document type is required or not | No |  |
+| status | query | The document type is enabled or not | No |  |
 
-> Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.
+**Responses**
 
-Base URLs:
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-* <a href="http://dokan-sample.test">http://dokan-sample.test</a>
+### ***POST*** 
 
-<h1 id="-default">Default</h1>
+### HTTP Request 
+`***POST*** /verification-methods` 
 
-## get__verification-methods
+**Parameters**
 
-> Code samples
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| title | query | Title of the resource. | Yes |  |
+| help_text | query | Help Text of the resource. | No |  |
+| status | query | The document type status is enabled or not | No |  |
+| kind | query | The document type kind | No |  |
+| required | query | The document type is required or not | No |  |
 
-```php
-<?php
+**Responses**
 
-require 'vendor/autoload.php';
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-$client = new \GuzzleHttp\Client();
+## /VERIFICATION-METHODS/{ID}
+### ***GET*** 
 
-// Define array of request body.
-$request_body = array();
+### HTTP Request 
+`***GET*** /verification-methods/{id}` 
 
-try {
-    $response = $client->request('GET','http://dokan-sample.test/verification-methods', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
+**Parameters**
 
- // ...
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| context | query |  | No |  |
 
-```
+**Responses**
 
-```python
-import requests
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-r = requests.get('http://dokan-sample.test/verification-methods')
+### ***POST*** 
 
-print(r.json())
+### HTTP Request 
+`***POST*** /verification-methods/{id}` 
 
-```
+**Parameters**
 
-```ruby
-require 'rest-client'
-require 'json'
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| title | query | Title of the resource. | No |  |
+| help_text | query | Help Text of the resource. | No |  |
+| status | query | The document type status is enabled or not | No |  |
+| kind | query | The document type kind | No |  |
+| required | query | The document type is required or not | No |  |
 
-result = RestClient.get 'http://dokan-sample.test/verification-methods',
-  params: {
-  }
+**Responses**
 
-p JSON.parse(result)
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-```
+### ***PUT*** 
 
-`GET /verification-methods`
+### HTTP Request 
+`***PUT*** /verification-methods/{id}` 
 
-<h3 id="get__verification-methods-parameters">Parameters</h3>
+**Parameters**
 
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|context|query|string|false|Scope under which the request is made; determines fields present in response.|
-|page|query|integer|false|Current page of the collection.|
-|per_page|query|integer|false|Maximum number of items to be returned in result set.|
-|required|query|boolean|false|The document type is required or not|
-|status|query|boolean|false|The document type is enabled or not|
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| title | query | Title of the resource. | No |  |
+| help_text | query | Help Text of the resource. | No |  |
+| status | query | The document type status is enabled or not | No |  |
+| kind | query | The document type kind | No |  |
+| required | query | The document type is required or not | No |  |
 
-#### Enumerated Values
+**Responses**
 
-|Parameter|Value|
-|---|---|
-|context|view|
-|context|edit|
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-<h3 id="get__verification-methods-responses">Responses</h3>
+### ***PATCH*** 
 
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## post__verification-methods
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('POST','http://dokan-sample.test/verification-methods', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
+### HTTP Request 
+`***PATCH*** /verification-methods/{id}` 
 
- // ...
+**Parameters**
 
-```
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| title | query | Title of the resource. | No |  |
+| help_text | query | Help Text of the resource. | No |  |
+| status | query | The document type status is enabled or not | No |  |
+| kind | query | The document type kind | No |  |
+| required | query | The document type is required or not | No |  |
 
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
-
-r = requests.post('http://dokan-sample.test/verification-methods', params={
-  'title': 'string'
-}, headers = headers)
-
-print(r.json())
+**Responses**
 
-```
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-```ruby
-require 'rest-client'
-require 'json'
+### ***DELETE*** 
 
-headers = {
-  'Content-Type' => 'application/json'
-}
+### HTTP Request 
+`***DELETE*** /verification-methods/{id}` 
 
-result = RestClient.post 'http://dokan-sample.test/verification-methods',
-  params: {
-  'title' => 'string'
-}, headers: headers
+**Parameters**
 
-p JSON.parse(result)
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| force | query |  | No |  |
 
-```
+**Responses**
 
-`POST /verification-methods`
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-> Body parameter
-
-```json
-{
-  "title": "string",
-  "help_text": "string",
-  "status": true,
-  "kind": "address",
-  "required": true
-}
-```
-
-<h3 id="post__verification-methods-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|title|query|string|true|Title of the resource.|
-|help_text|query|string|false|Help Text of the resource.|
-|status|query|boolean|false|The document type status is enabled or not|
-|kind|query|string(text)|false|The document type kind|
-|required|query|boolean|false|The document type is required or not|
-|body|body|object|true|none|
-|» title|body|string|false|Title of the resource.|
-|» help_text|body|string|false|Help Text of the resource.|
-|» status|body|boolean|false|The document type status is enabled or not|
-|» kind|body|string(text)|false|The document type kind|
-|» required|body|boolean|false|The document type is required or not|
-
-#### Enumerated Values
-
-|Parameter|Value|
-|---|---|
-|kind|address|
-|kind|custom|
-|» kind|address|
-|» kind|custom|
-
-<h3 id="post__verification-methods-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## get__verification-methods_{id}
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('GET','http://dokan-sample.test/verification-methods/{id}', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-
-r = requests.get('http://dokan-sample.test/verification-methods/{id}')
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'http://dokan-sample.test/verification-methods/{id}',
-  params: {
-  }
-
-p JSON.parse(result)
-
-```
-
-`GET /verification-methods/{id}`
-
-<h3 id="get__verification-methods_{id}-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|context|query|string|false|none|
-
-<h3 id="get__verification-methods_{id}-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## post__verification-methods_{id}
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('POST','http://dokan-sample.test/verification-methods/{id}', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
-
-r = requests.post('http://dokan-sample.test/verification-methods/{id}', headers = headers)
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json'
-}
-
-result = RestClient.post 'http://dokan-sample.test/verification-methods/{id}',
-  params: {
-  }, headers: headers
-
-p JSON.parse(result)
-
-```
-
-`POST /verification-methods/{id}`
-
-> Body parameter
-
-```json
-{
-  "title": "string",
-  "help_text": "string",
-  "status": true,
-  "kind": "address",
-  "required": true
-}
-```
-
-<h3 id="post__verification-methods_{id}-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|title|query|string|false|Title of the resource.|
-|help_text|query|string|false|Help Text of the resource.|
-|status|query|boolean|false|The document type status is enabled or not|
-|kind|query|string(text)|false|The document type kind|
-|required|query|boolean|false|The document type is required or not|
-|body|body|object|true|none|
-|» title|body|string|false|Title of the resource.|
-|» help_text|body|string|false|Help Text of the resource.|
-|» status|body|boolean|false|The document type status is enabled or not|
-|» kind|body|string(text)|false|The document type kind|
-|» required|body|boolean|false|The document type is required or not|
-
-#### Enumerated Values
-
-|Parameter|Value|
-|---|---|
-|kind|address|
-|kind|custom|
-|» kind|address|
-|» kind|custom|
-
-<h3 id="post__verification-methods_{id}-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## put__verification-methods_{id}
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('PUT','http://dokan-sample.test/verification-methods/{id}', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
-
-r = requests.put('http://dokan-sample.test/verification-methods/{id}', headers = headers)
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json'
-}
-
-result = RestClient.put 'http://dokan-sample.test/verification-methods/{id}',
-  params: {
-  }, headers: headers
-
-p JSON.parse(result)
-
-```
-
-`PUT /verification-methods/{id}`
-
-> Body parameter
-
-```json
-{
-  "title": "string",
-  "help_text": "string",
-  "status": true,
-  "kind": "address",
-  "required": true
-}
-```
-
-<h3 id="put__verification-methods_{id}-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|title|query|string|false|Title of the resource.|
-|help_text|query|string|false|Help Text of the resource.|
-|status|query|boolean|false|The document type status is enabled or not|
-|kind|query|string(text)|false|The document type kind|
-|required|query|boolean|false|The document type is required or not|
-|body|body|object|true|none|
-|» title|body|string|false|Title of the resource.|
-|» help_text|body|string|false|Help Text of the resource.|
-|» status|body|boolean|false|The document type status is enabled or not|
-|» kind|body|string(text)|false|The document type kind|
-|» required|body|boolean|false|The document type is required or not|
-
-#### Enumerated Values
-
-|Parameter|Value|
-|---|---|
-|kind|address|
-|kind|custom|
-|» kind|address|
-|» kind|custom|
-
-<h3 id="put__verification-methods_{id}-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## patch__verification-methods_{id}
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('PATCH','http://dokan-sample.test/verification-methods/{id}', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
-
-r = requests.patch('http://dokan-sample.test/verification-methods/{id}', headers = headers)
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json'
-}
-
-result = RestClient.patch 'http://dokan-sample.test/verification-methods/{id}',
-  params: {
-  }, headers: headers
-
-p JSON.parse(result)
-
-```
-
-`PATCH /verification-methods/{id}`
-
-> Body parameter
-
-```json
-{
-  "title": "string",
-  "help_text": "string",
-  "status": true,
-  "kind": "address",
-  "required": true
-}
-```
-
-<h3 id="patch__verification-methods_{id}-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|title|query|string|false|Title of the resource.|
-|help_text|query|string|false|Help Text of the resource.|
-|status|query|boolean|false|The document type status is enabled or not|
-|kind|query|string(text)|false|The document type kind|
-|required|query|boolean|false|The document type is required or not|
-|body|body|object|true|none|
-|» title|body|string|false|Title of the resource.|
-|» help_text|body|string|false|Help Text of the resource.|
-|» status|body|boolean|false|The document type status is enabled or not|
-|» kind|body|string(text)|false|The document type kind|
-|» required|body|boolean|false|The document type is required or not|
-
-#### Enumerated Values
-
-|Parameter|Value|
-|---|---|
-|kind|address|
-|kind|custom|
-|» kind|address|
-|» kind|custom|
-
-<h3 id="patch__verification-methods_{id}-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## delete__verification-methods_{id}
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('DELETE','http://dokan-sample.test/verification-methods/{id}', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-
-r = requests.delete('http://dokan-sample.test/verification-methods/{id}')
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'http://dokan-sample.test/verification-methods/{id}',
-  params: {
-  }
-
-p JSON.parse(result)
-
-```
-
-`DELETE /verification-methods/{id}`
-
-<h3 id="delete__verification-methods_{id}-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|force|query|string|false|none|
-
-<h3 id="delete__verification-methods_{id}-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
+<!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->

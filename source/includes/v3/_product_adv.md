@@ -1,961 +1,219 @@
----
-title: null
-language_tabs:
-  - curl: CURL
-  - php: PHP
-  - python: Python
-  - ruby: Ruby
-toc_footers: []
-includes: []
-search: true
-highlight_theme: darkula
-headingLevel: 2
+# PRODUCT_ADV
+## /PRODUCT_ADV
+### ***GET*** 
 
----
+### HTTP Request 
+`***GET*** /product_adv` 
 
-<!-- Generator: Widdershins v4.0.1 -->
+**Parameters**
 
-<h1 id="">undefined vv1.0.0</h1>
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| context | query | Scope under which the request is made; determines fields present in response. | No |  |
+| page | query | Current page of the collection. | No |  |
+| per_page | query | Maximum number of items to be returned in result set. | No |  |
+| search | query | Limit results to those matching a string. | No |  |
+| vendor_id | query | Vendor IDs to filter form | No |  |
+| product_id | query | Product IDs to filter form | No |  |
+| order_id | query | Order IDs to filter form | No |  |
+| status | query | Advertised product status, 0 to get all status, 1 for active advertisements and 2 for inactive advertisements | No |  |
+| expires_at | query | Get advertised products by their expire date | No |  |
+| created_via | query | Filter how advertisement was created | No |  |
+| return | query | How data will be returned | No |  |
 
-> Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.
+**Responses**
 
-Base URLs:
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-* <a href="http://dokan-sample.test">http://dokan-sample.test</a>
+## /PRODUCT_ADV/{ID}/EXPIRE
+### ***POST*** 
 
-<h1 id="-default">Default</h1>
+### HTTP Request 
+`***POST*** /product_adv/{id}/expire` 
 
-## get__product_adv
+**Parameters**
 
-> Code samples
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| id | path | Unique identifier for the object. | Yes |  |
 
-```php
-<?php
+**Responses**
 
-require 'vendor/autoload.php';
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-$client = new \GuzzleHttp\Client();
+### ***PUT*** 
 
-// Define array of request body.
-$request_body = array();
+### HTTP Request 
+`***PUT*** /product_adv/{id}/expire` 
 
-try {
-    $response = $client->request('GET','http://dokan-sample.test/product_adv', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
+**Parameters**
 
- // ...
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| id | path | Unique identifier for the object. | Yes |  |
 
-```
+**Responses**
 
-```python
-import requests
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-r = requests.get('http://dokan-sample.test/product_adv')
+### ***PATCH*** 
 
-print(r.json())
+### HTTP Request 
+`***PATCH*** /product_adv/{id}/expire` 
 
-```
+**Parameters**
 
-```ruby
-require 'rest-client'
-require 'json'
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| id | path | Unique identifier for the object. | Yes |  |
 
-result = RestClient.get 'http://dokan-sample.test/product_adv',
-  params: {
-  }
+**Responses**
 
-p JSON.parse(result)
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-```
+## /PRODUCT_ADV/{ID}
+### ***DELETE*** 
 
-`GET /product_adv`
+### HTTP Request 
+`***DELETE*** /product_adv/{id}` 
 
-<h3 id="get__product_adv-parameters">Parameters</h3>
+**Parameters**
 
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|context|query|string|false|Scope under which the request is made; determines fields present in response.|
-|page|query|integer|false|Current page of the collection.|
-|per_page|query|integer|false|Maximum number of items to be returned in result set.|
-|search|query|string|false|Limit results to those matching a string.|
-|vendor_id|query|array[integer]|false|Vendor IDs to filter form|
-|product_id|query|array[integer]|false|Product IDs to filter form|
-|order_id|query|array[integer]|false|Order IDs to filter form|
-|status|query|integer|false|Advertised product status, 0 to get all status, 1 for active advertisements and 2 for inactive advertisements|
-|expires_at|query|object|false|Get advertised products by their expire date|
-|created_via|query|string|false|Filter how advertisement was created|
-|return|query|string|false|How data will be returned|
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| id | path | Unique identifier for the object. | Yes |  |
 
-#### Enumerated Values
+**Responses**
 
-|Parameter|Value|
-|---|---|
-|context|view|
-|context|edit|
-|status|0|
-|status|1|
-|status|2|
-|created_via||
-|created_via|order|
-|created_via|admin|
-|created_via|subscription|
-|created_via|free|
-|return|all|
-|return|ids|
-|return|count|
-|return|individual_count|
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-<h3 id="get__product_adv-responses">Responses</h3>
+## /PRODUCT_ADV/BATCH
+### ***POST*** 
 
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
+### HTTP Request 
+`***POST*** /product_adv/batch` 
 
-<aside class="success">
-This operation does not require authentication
-</aside>
+**Parameters**
 
-## post__product_adv_{id}_expire
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| context | query | Scope under which the request is made; determines fields present in response. | No |  |
+| action | query | Batch action name to process | Yes |  |
+| ids | query | Batch action to carry on advertisement items | Yes |  |
 
-> Code samples
+**Responses**
 
-```php
-<?php
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-require 'vendor/autoload.php';
+### ***PUT*** 
 
-$client = new \GuzzleHttp\Client();
+### HTTP Request 
+`***PUT*** /product_adv/batch` 
 
-// Define array of request body.
-$request_body = array();
+**Parameters**
 
-try {
-    $response = $client->request('POST','http://dokan-sample.test/product_adv/{id}/expire', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| context | query | Scope under which the request is made; determines fields present in response. | No |  |
+| action | query | Batch action name to process | Yes |  |
+| ids | query | Batch action to carry on advertisement items | Yes |  |
 
- // ...
+**Responses**
 
-```
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-```python
-import requests
+### ***PATCH*** 
 
-r = requests.post('http://dokan-sample.test/product_adv/{id}/expire')
+### HTTP Request 
+`***PATCH*** /product_adv/batch` 
 
-print(r.json())
+**Parameters**
 
-```
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| context | query | Scope under which the request is made; determines fields present in response. | No |  |
+| action | query | Batch action name to process | Yes |  |
+| ids | query | Batch action to carry on advertisement items | Yes |  |
 
-```ruby
-require 'rest-client'
-require 'json'
+**Responses**
 
-result = RestClient.post 'http://dokan-sample.test/product_adv/{id}/expire',
-  params: {
-  }
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-p JSON.parse(result)
+## /PRODUCT_ADV/STORES
+### ***GET*** 
 
-```
+### HTTP Request 
+`***GET*** /product_adv/stores` 
 
-`POST /product_adv/{id}/expire`
+**Parameters**
 
-<h3 id="post__product_adv_{id}_expire-parameters">Parameters</h3>
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| context | query | Scope under which the request is made; determines fields present in response. | No |  |
+| page | query | Current page of the collection. | No |  |
+| per_page | query | Maximum number of items to be returned in result set. | No |  |
+| search | query | Limit results to those matching a string. | No |  |
 
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|id|path|integer|true|Unique identifier for the object.|
+**Responses**
 
-<h3 id="post__product_adv_{id}_expire-responses">Responses</h3>
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
+## /PRODUCT_ADV/CREATE
+### ***POST*** 
 
-<aside class="success">
-This operation does not require authentication
-</aside>
+### HTTP Request 
+`***POST*** /product_adv/create` 
 
-## put__product_adv_{id}_expire
+**Parameters**
 
-> Code samples
+| Name | Located in | Description | Required | Type |
+| ---- | ---------- | ----------- | -------- | ---- |
+| product_id | query | To be advertise product id. | Yes |  |
+| vendor_id | query | Vendor of the product. | Yes |  |
+| reverse_withdrawal_entry | query | Add Reverse Withdrawal Entry. | No |  |
 
-```php
-<?php
+**Responses**
 
-require 'vendor/autoload.php';
+| Code | Description |
+| ---- | ----------- |
+| 200 | OK |
+| 400 | Bad Request |
+| 404 | Not Found |
 
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('PUT','http://dokan-sample.test/product_adv/{id}/expire', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-
-r = requests.put('http://dokan-sample.test/product_adv/{id}/expire')
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.put 'http://dokan-sample.test/product_adv/{id}/expire',
-  params: {
-  }
-
-p JSON.parse(result)
-
-```
-
-`PUT /product_adv/{id}/expire`
-
-<h3 id="put__product_adv_{id}_expire-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|id|path|integer|true|Unique identifier for the object.|
-
-<h3 id="put__product_adv_{id}_expire-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## patch__product_adv_{id}_expire
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('PATCH','http://dokan-sample.test/product_adv/{id}/expire', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-
-r = requests.patch('http://dokan-sample.test/product_adv/{id}/expire')
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.patch 'http://dokan-sample.test/product_adv/{id}/expire',
-  params: {
-  }
-
-p JSON.parse(result)
-
-```
-
-`PATCH /product_adv/{id}/expire`
-
-<h3 id="patch__product_adv_{id}_expire-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|id|path|integer|true|Unique identifier for the object.|
-
-<h3 id="patch__product_adv_{id}_expire-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## delete__product_adv_{id}
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('DELETE','http://dokan-sample.test/product_adv/{id}', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-
-r = requests.delete('http://dokan-sample.test/product_adv/{id}')
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'http://dokan-sample.test/product_adv/{id}',
-  params: {
-  }
-
-p JSON.parse(result)
-
-```
-
-`DELETE /product_adv/{id}`
-
-<h3 id="delete__product_adv_{id}-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|id|path|integer|true|Unique identifier for the object.|
-
-<h3 id="delete__product_adv_{id}-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## post__product_adv_batch
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('POST','http://dokan-sample.test/product_adv/batch', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
-
-r = requests.post('http://dokan-sample.test/product_adv/batch', params={
-  'action': 'expire',  'ids': [
-  0
-]
-}, headers = headers)
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json'
-}
-
-result = RestClient.post 'http://dokan-sample.test/product_adv/batch',
-  params: {
-  'action' => 'string',
-'ids' => 'array[integer]'
-}, headers: headers
-
-p JSON.parse(result)
-
-```
-
-`POST /product_adv/batch`
-
-> Body parameter
-
-```json
-{
-  "context": "view",
-  "action": "expire",
-  "ids": [
-    0
-  ]
-}
-```
-
-<h3 id="post__product_adv_batch-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|context|query|string|false|Scope under which the request is made; determines fields present in response.|
-|action|query|string|true|Batch action name to process|
-|ids|query|array[integer]|true|Batch action to carry on advertisement items|
-|body|body|object|true|none|
-|» context|body|string|false|Scope under which the request is made; determines fields present in response.|
-|» action|body|string|false|Batch action name to process|
-|» ids|body|[integer]|false|Batch action to carry on advertisement items|
-
-#### Enumerated Values
-
-|Parameter|Value|
-|---|---|
-|context|view|
-|context|edit|
-|action|expire|
-|action|delete|
-|» context|view|
-|» context|edit|
-|» action|expire|
-|» action|delete|
-
-<h3 id="post__product_adv_batch-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## put__product_adv_batch
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('PUT','http://dokan-sample.test/product_adv/batch', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
-
-r = requests.put('http://dokan-sample.test/product_adv/batch', params={
-  'action': 'expire',  'ids': [
-  0
-]
-}, headers = headers)
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json'
-}
-
-result = RestClient.put 'http://dokan-sample.test/product_adv/batch',
-  params: {
-  'action' => 'string',
-'ids' => 'array[integer]'
-}, headers: headers
-
-p JSON.parse(result)
-
-```
-
-`PUT /product_adv/batch`
-
-> Body parameter
-
-```json
-{
-  "context": "view",
-  "action": "expire",
-  "ids": [
-    0
-  ]
-}
-```
-
-<h3 id="put__product_adv_batch-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|context|query|string|false|Scope under which the request is made; determines fields present in response.|
-|action|query|string|true|Batch action name to process|
-|ids|query|array[integer]|true|Batch action to carry on advertisement items|
-|body|body|object|true|none|
-|» context|body|string|false|Scope under which the request is made; determines fields present in response.|
-|» action|body|string|false|Batch action name to process|
-|» ids|body|[integer]|false|Batch action to carry on advertisement items|
-
-#### Enumerated Values
-
-|Parameter|Value|
-|---|---|
-|context|view|
-|context|edit|
-|action|expire|
-|action|delete|
-|» context|view|
-|» context|edit|
-|» action|expire|
-|» action|delete|
-
-<h3 id="put__product_adv_batch-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## patch__product_adv_batch
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('PATCH','http://dokan-sample.test/product_adv/batch', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
-
-r = requests.patch('http://dokan-sample.test/product_adv/batch', params={
-  'action': 'expire',  'ids': [
-  0
-]
-}, headers = headers)
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json'
-}
-
-result = RestClient.patch 'http://dokan-sample.test/product_adv/batch',
-  params: {
-  'action' => 'string',
-'ids' => 'array[integer]'
-}, headers: headers
-
-p JSON.parse(result)
-
-```
-
-`PATCH /product_adv/batch`
-
-> Body parameter
-
-```json
-{
-  "context": "view",
-  "action": "expire",
-  "ids": [
-    0
-  ]
-}
-```
-
-<h3 id="patch__product_adv_batch-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|context|query|string|false|Scope under which the request is made; determines fields present in response.|
-|action|query|string|true|Batch action name to process|
-|ids|query|array[integer]|true|Batch action to carry on advertisement items|
-|body|body|object|true|none|
-|» context|body|string|false|Scope under which the request is made; determines fields present in response.|
-|» action|body|string|false|Batch action name to process|
-|» ids|body|[integer]|false|Batch action to carry on advertisement items|
-
-#### Enumerated Values
-
-|Parameter|Value|
-|---|---|
-|context|view|
-|context|edit|
-|action|expire|
-|action|delete|
-|» context|view|
-|» context|edit|
-|» action|expire|
-|» action|delete|
-
-<h3 id="patch__product_adv_batch-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## get__product_adv_stores
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('GET','http://dokan-sample.test/product_adv/stores', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-
-r = requests.get('http://dokan-sample.test/product_adv/stores')
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.get 'http://dokan-sample.test/product_adv/stores',
-  params: {
-  }
-
-p JSON.parse(result)
-
-```
-
-`GET /product_adv/stores`
-
-<h3 id="get__product_adv_stores-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|context|query|string|false|Scope under which the request is made; determines fields present in response.|
-|page|query|integer|false|Current page of the collection.|
-|per_page|query|integer|false|Maximum number of items to be returned in result set.|
-|search|query|string|false|Limit results to those matching a string.|
-
-#### Enumerated Values
-
-|Parameter|Value|
-|---|---|
-|context|view|
-|context|edit|
-
-<h3 id="get__product_adv_stores-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
-## post__product_adv_create
-
-> Code samples
-
-```php
-<?php
-
-require 'vendor/autoload.php';
-
-$headers = array(
-    'Content-Type' => 'application/json',
-);
-
-$client = new \GuzzleHttp\Client();
-
-// Define array of request body.
-$request_body = array();
-
-try {
-    $response = $client->request('POST','http://dokan-sample.test/product_adv/create', array(
-        'headers' => $headers,
-        'json' => $request_body,
-       )
-    );
-    print_r($response->getBody()->getContents());
- }
- catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
-    print_r($e->getMessage());
- }
-
- // ...
-
-```
-
-```python
-import requests
-headers = {
-  'Content-Type': 'application/json'
-}
-
-r = requests.post('http://dokan-sample.test/product_adv/create', params={
-  'product_id': '0',  'vendor_id': '0'
-}, headers = headers)
-
-print(r.json())
-
-```
-
-```ruby
-require 'rest-client'
-require 'json'
-
-headers = {
-  'Content-Type' => 'application/json'
-}
-
-result = RestClient.post 'http://dokan-sample.test/product_adv/create',
-  params: {
-  'product_id' => 'integer',
-'vendor_id' => 'integer'
-}, headers: headers
-
-p JSON.parse(result)
-
-```
-
-`POST /product_adv/create`
-
-> Body parameter
-
-```json
-{
-  "product_id": 0,
-  "vendor_id": 0,
-  "reverse_withdrawal_entry": true
-}
-```
-
-<h3 id="post__product_adv_create-parameters">Parameters</h3>
-
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|product_id|query|integer|true|To be advertise product id.|
-|vendor_id|query|integer|true|Vendor of the product.|
-|reverse_withdrawal_entry|query|boolean|false|Add Reverse Withdrawal Entry.|
-|body|body|object|true|none|
-|» product_id|body|integer|false|To be advertise product id.|
-|» vendor_id|body|integer|false|Vendor of the product.|
-|» reverse_withdrawal_entry|body|boolean|false|Add Reverse Withdrawal Entry.|
-
-<h3 id="post__product_adv_create-responses">Responses</h3>
-
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|None|
-|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad Request|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not Found|None|
-
-<aside class="success">
-This operation does not require authentication
-</aside>
-
+<!-- Converted with the swagger-to-slate https://github.com/lavkumarv/swagger-to-slate -->
